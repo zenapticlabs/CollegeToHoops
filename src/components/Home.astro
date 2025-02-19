@@ -1,0 +1,22 @@
+---
+import HeroSection from "./Home/HeroSection.astro";
+import Header from "../components/Home/Header.astro"
+import { Image } from "astro:assets";
+import homeImg from "../assets/bgImg.png";
+---
+
+<div id="container" >
+  <div class="w-full h-[848px] overflow-hidden relative ">
+    <Image
+      src={homeImg}
+      format="png"
+      alt={""}
+      loading="lazy"
+      class="w-full h-full"/>
+    <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#00000021]  to-black">
+      <Header />
+      <HeroSection />
+    </div>
+  </div>
+</div>
+
