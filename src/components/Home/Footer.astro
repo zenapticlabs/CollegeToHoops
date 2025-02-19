@@ -1,0 +1,41 @@
+---
+import { Image } from "astro:assets";
+import footer_img from "../../assets/footer-img.svg";
+import twitter from "../../assets/twitter.svg";
+import discord from "../../assets/discord.svg";
+import youtube from "../../assets/youtube.svg";
+import tiktok from "../../assets/tiktok.svg"
+---
+
+<div>
+    <div class="w-full">
+    <Image
+    src={footer_img}
+    format="svg"
+    alt={""}
+    loading="lazy"
+    class="w-full h-full"
+  />
+    </div>
+    <div class=" h-[120px] flex items-center justify-between text-[20px] text-white p-5 ">
+        <span>
+            @ 2025 Hoops to College. All rights reserved.
+        </span>
+        <span class="flex items-center  gap-4">
+            <Image src={twitter} format="svg" alt={"logo"} loading="lazy"  />
+            <Image src={discord} format="svg" alt={"logo"} loading="lazy"  />
+            <Image src={youtube} format="svg" alt={"logo"} loading="lazy"  />
+            <Image src={tiktok} format="svg" alt={"logo"} loading="lazy"  />
+         </span>
+         <span class="flex items-center  gap-2.5">
+            <span>
+                Term & Conditions
+            </span>
+            <span class="w-[5px] h-[5px] rounded-full bg-[#6D6D6D]">
+            </span>
+            <span>
+                Privacy Policies
+            </span>
+         </span>
+    </div>
+</div>
