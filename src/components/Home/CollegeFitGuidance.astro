@@ -1,0 +1,91 @@
+---
+import { Image } from "astro:assets";
+import college_fit_guidance from "../../assets/college-fit-guidance.png";
+import play_opacity from "../../assets/play-opacity.svg";
+import shooting_star from "../../assets/shooting-star.svg";
+import target from "../../assets/target.svg";
+import rocket from "../../assets/rocket.svg";
+const guidanceItems = [
+  {
+    image: shooting_star,
+    description:
+      "Learn from Myles’ journey— get expert guidance tailored to you.",
+  },
+  {
+    image: target,
+    description: "Don’t get overlooked — get recruited the right way.",
+  },
+  {
+    image: rocket,
+    description: "Your future starts now.Let’s build your game plan.",
+  },
+];
+---
+
+<div class="flex flex-col items-center justify-center gap-7 bg-black p-5">
+  <div class="w-[100vw] h-[auto]">
+    <div>
+      <div
+        class="flex flex-col items-center justify-between text-[20px] text-white p-5 w-[100vw]"
+      >
+        <h2
+          class="font-bold text-5xl leading-16 text-center bg-gradient-to-r from-gray-500 to-white text-transparent bg-clip-text w-full uppercase"
+        >
+          Find the Right Fit, Not Just the Biggest Name
+        </h2>
+        <span
+          class="font-normal text-xl leading-[27px] text-center w-[50vw] max-md:w-full mt-3"
+          >Myles learned this firsthand. Chasing big-name programs doesn’t
+          always lead to success. The right school is where you can grow,
+          compete, and thrive—on and off the court.</span
+        >
+      </div>
+    </div>
+    <div class="flex flex-col items-center justify-center gap-5 p-5">
+      <div class="relative overflow-hidden">
+        <Image
+          src={college_fit_guidance}
+          format="png"
+          alt={"logo"}
+          loading="lazy"
+          class="w-[854px] h-[480px] m-auto object-cover object-top shadow-[0px_0px_150px_rgba(255,255,255,0.2)] rounded-[12px]"
+        />
+        <Image
+          src={play_opacity}
+          format="svg"
+          alt={"logo"}
+          loading="lazy"
+          class="absolute inset-0 m-auto w-12 h-12 object-cover"
+        />
+        <div class="absolute w-full h-full top-0 bg-[#00000061]"></div>
+      </div>
+    </div>
+  </div>
+  <div class="flex justify-center items-center gap-10 max-lg:flex-col px-4">
+    {
+      guidanceItems.map((item) => {
+        return (
+          <div class="w-[400px] h-[201px] max-md:w-full flex flex-col items-center justify-center gap-5">
+            <span class="w-12 h-12">
+              <Image
+                src={item.image}
+                format="svg"
+                alt={"logo"}
+                loading="lazy"
+                class="w-12 h-12"
+              />
+            </span>
+            <p class="w-[300px] h-[81px] flex justify-center items-center text-white text-center text-xl font-normal ">
+              {item.description}
+            </p>
+          </div>
+        );
+      })
+    }
+  </div>
+  <button
+    class="animate-pulse w-[383px] max-md:w-auto h-[56px] rounded-[8px] border-[1px] p-[8px] bg-gradient-to-r from-[#E65E10] to-[#FF9355] text-center gap-2 max-md:h-[46px] text-white mb-3"
+  >
+    Find My Best College Fit—Start Now
+  </button>
+</div>
