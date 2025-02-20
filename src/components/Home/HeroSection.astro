@@ -1,0 +1,37 @@
+---
+import { Image } from "astro:assets";
+import arrowUp from "../../assets/arrow-up-right.svg";
+---
+
+<div
+  class="container mx-auto gap-3 lg:gap-16 text-[#FFFFFF] flex w-full flex-col justify-center items-start h-full px-10 max-lg:py-3"
+>
+  <div class="">
+    <p
+      class="font-bold text-4xl text-[64px] uppercase mb-4 bg-gradient-to-r from-gray-300 to-white bg-clip-text text-transparent max-lg:text-[32px] max-lg:m-0"
+    >
+      Get Recruited.<br/> Secure Your Future.<br/> Play at the Next Level.
+  </p>
+    <span class="font-normal text-[20px] leading-[27px] tracking-normal max-md:text-[12px]"
+      >Trusted by athletes who refuse to go unnoticed.</span
+    >
+  </div>
+
+  <div class=" text-white text-xl font-normal flex flex-col gap-3 max-md:text-xs">
+    <p>
+        Scholarship opportunities are filling fast – take action today!
+    </p>
+      <button
+        class=" animate-pulse w-[383px] h-[56px] rounded-[8px] border-[1px] p-[8px] bg-gradient-to-r from-[#E65E10] to-[#FF9355] flex items-center gap-2 max-md:h-[46px] max-md:w-[246px]"
+      >
+        Find My Best College Fit – Let’s Talk<Image
+        src={arrowUp}
+        format="svg"
+        alt={""}
+        loading="lazy"
+      />
+      </button>
+          <p>🔥 Trusted by athletes who refuse to go unnoticed.</p>
+          <p> 90% of players get a coach response in under 6 weeks. </p>
+  </div>
+</div>
