@@ -22,11 +22,11 @@ const guidanceItems = [
 ];
 ---
 
-<div class="flex flex-col items-center justify-center gap-7 bg-black p-5">
-  <div class="w-[100vw] h-[auto]">
+<div class="w-full overflow-hidden flex flex-col items-center justify-center gap-7 bg-black p-5">
+  <div class="h-[auto]">
     <div>
       <div
-        class="flex flex-col items-center justify-between text-[20px] text-white p-5 w-[100vw]"
+        class="flex flex-col items-center justify-between text-[20px] text-white p-5 w-full"
       >
         <h2
           class="font-bold text-5xl leading-16 text-center bg-gradient-to-r from-gray-500 to-white text-transparent bg-clip-text w-full uppercase"
@@ -41,8 +41,9 @@ const guidanceItems = [
         >
       </div>
     </div>
-    <div class="flex flex-col items-center justify-center gap-5 p-5">
-      <div class="relative overflow-hidden">
+    <div class="flex flex-col items-center justify-center gap-5 p-5 overflow-hidden"
+    >
+      <div class="relative">
         <Image
           src={college_fit_guidance}
           format="png"
@@ -57,7 +58,6 @@ const guidanceItems = [
           loading="lazy"
           class="absolute inset-0 m-auto w-12 h-12 object-cover"
         />
-        <div class="absolute w-full h-full top-0 bg-[#00000061]"></div>
       </div>
     </div>
   </div>
@@ -88,4 +88,20 @@ const guidanceItems = [
   >
     Find My Best College Fit—Start Now
   </button>
+  <div class="overflow-hidden">
+    <p class="text-white marquee">
+      <span class="font-bold text-4xl leading-[60px] tracking-normal">
+        🏀 Personalized Recruiting Guidance 🏀 College Fit Analysis 🏀
+        Mentorship from Experienced Coaches 🏀 Personalized Recruiting Guidance
+        🏀 College Fit Analysis 🏀 Mentorship from Experienced Coaches</span
+      >
+    </p>
+    <p class="marquee marquee2 text-white relative bottom-[60px]">
+      <span class="font-bold text-4xl leading-[60px] tracking-normal"
+        >🏀 Personalized Recruiting Guidance 🏀 College Fit Analysis 🏀
+        Mentorship from Experienced Coaches 🏀 Personalized Recruiting Guidance
+        🏀 College Fit Analysis 🏀 Mentorship from Experienced Coaches</span
+      >
+    </p>
+  </div>
 </div>

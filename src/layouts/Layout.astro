@@ -16,8 +16,8 @@ import "../styles/global.css";
     <title>CollegeToHoops</title>
   </head>
   <body>
-    <slot />
-    <Footer />
+      <slot />
+      <Footer />
   </body>
 </html>
 
@@ -25,12 +25,14 @@ import "../styles/global.css";
   html,
   body {
     margin: 0;
-    width: 100%;
+    max-width: 100%;
+    padding: 0px;
+    box-sizing: border-box;
     height: 100%;
     font-family: "Figtree", sans-serif;
-    background-image: url("../assets/bg-main.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+   background-image:url('../assets/bg-main.png');
+   background-size: cover;  
+  background-position: center;  
+  background-repeat: no-repeat;  
   }
 </style>

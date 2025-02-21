@@ -1,0 +1,231 @@
+---
+import { Image } from "astro:assets";
+import star from "../../assets/star.svg";
+import check from "../../assets/check.svg";
+import plan_rocket from "../../assets/plan-rocket.svg";
+import seal_check from "../../assets/seal-check.svg";
+import sparkle from "../../assets/sparkle.svg";
+const subscriptionPlans = [
+  {
+    plan: {
+      icon: star,
+      planName: "Essential Game Plan",
+      price: "$90",
+      description:
+        "Your First Step Toward College Basketball – Build Your Foundation & Get Noticed!",
+      services: [
+        {
+          icon: check,
+          detail: "Basic recruiting playbook (NCAA timeline, email tips)",
+        },
+        {
+          icon: check,
+          detail: "Quick school recommendations (3–5) ",
+        },
+        {
+          icon: check,
+          detail: "Pre-written email templates ",
+        },
+        {
+          icon: check,
+          detail: "Limited Q&A via email",
+        },
+      ],
+      footer: "This investment could lead to a $20,000+ scholarship.",
+      highlighted: { status: false, detail: "" },
+      teaser: { status: false, detail: "" },
+    },
+  },
+
+  {
+    plan: {
+      icon: plan_rocket,
+      planName: "Guided Recruiting Roadmap",
+      price: "$299",
+      description:
+        "Take Control of Your Recruiting Journey – Get a Personalized Plan Built for Success!",
+      services: [
+        {
+          icon: check,
+          detail: "Everything in Tier 1",
+        },
+        {
+          icon: check,
+          detail: "Highlight reel review (feedback only) ",
+        },
+        {
+          icon: check,
+          detail: "8–10 targeted school recommendations ",
+        },
+        {
+          icon: check,
+          detail: "2-week follow-up (email/text)",
+        },
+        {
+          icon: check,
+          detail: "30-min Zoom intake ",
+        },
+      ],
+      footer: "Add-on: Full highlight reel creation ($149)",
+      highlighted: { status: false, detail: "" },
+      teaser: { status: false, detail: "" },
+    },
+  },
+  {
+    plan: {
+      icon: sparkle,
+      planName: "Elite Spotlight ",
+      price: "$799",
+      description:
+        "Be Seen by Coaches – Professional Highlight Reels & Direct Outreach Done for You!",
+      services: [
+        {
+          icon: check,
+          detail: "Everything in Tier 2",
+        },
+        {
+          icon: check,
+          detail: "Professionally edited highlight reel included",
+        },
+        {
+          icon: check,
+          detail: "Direct outreach to ~10–15 coaches  (partially done-for-you)",
+        },
+        {
+          icon: check,
+          detail: "4–6 weeks of support + 3 Zoom calls",
+        },
+      ],
+      footer:
+        "Players using this plan are <span class='font-bold'>3x more likely</span> to get a direct coach response.",
+      highlighted: { status: true, detail: "🔥 Most Popular" },
+      teaser: { status: true, detail: "🔥 Enrollment closing soon" },
+    },
+  },
+  {
+    plan: {
+      icon: seal_check,
+      planName: "All-In Pro Advantage",
+      price: "$3000",
+      description:
+        "The VIP Treatment – Get a Fully Managed Recruiting Plan & Secure Your Scholarship!",
+      services: [
+        {
+          icon: check,
+          detail:
+            "Deep “fit” analysis (roster needs, coaching style, academics)",
+        },
+        {
+          icon: check,
+          detail: "Unlimited highlight reel updates",
+        },
+        {
+          icon: check,
+          detail: "Multi-wave outreach to 20–30 schools ",
+        },
+        {
+          icon: check,
+          detail: "Ongoing Zoom calls + priority text/email",
+        },
+      ],
+      footer: "Limited capacity (e.g., 5 families per quarter)",
+      highlighted: { status: false, detail: "" },
+      teaser: { status: true, detail: "🔥 Only 5 spots per quarter" },
+    },
+  },
+];
+---
+
+<div
+  class="w-full bg-black text-white flex flex-col justify-center items-center gap-16 pb-4"
+>
+  <div class="flex flex-col items-center justify-center">
+    <p
+      class="bg-gradient-to-r from-gray-400 to-white text-transparent bg-clip-text font-bold text-6xl leading-tight tracking-normal text-center"
+    >
+      Find Your Path to College Hoops
+    </p>
+    <span
+      class="text-2xl leading-7 font-normal text-[20px] tracking-[0%] text-center"
+    >
+      Choose the right level of support to match your goals.
+    </span>
+  </div>
+  <div
+    class="w-[90%] bg-black gap-2 flex justify-center items-start max-md:flex-col max-md:items-center max-md:gap-5"
+  >
+    {
+      subscriptionPlans.map(({ plan }) => (
+        <div class=`w-[308px] pt-4 pr-0 pb-1 pl-0 rounded-2xl bg-[#0E0E0E] flex flex-col items-center justify-center gap-6 relative ${plan.highlighted.detail ? 'border-2 border-solid shadow-[0px_0px_250px_20px_rgba(203,203,203,0.2)]' :""}`>
+          {plan.highlighted.status && (
+            <span class="min-w-[120px] w-[45%] bg-gradient-to-b from-[#FFFFFF] to-[#9E9B9B] text-black rounded-[8px] p-[2px_2px_2px_2px] absolute right-[10px] top-[-14px] font-[400] text-[16px] leading-[27px] text-center">
+              {plan.highlighted.detail}
+            </span>
+          )}
+        
+          <div class="w-[85%] flex justify-between items-center ">
+            <span>
+              <Image
+                src={plan.icon}
+                format="svg"
+                alt={"logo"}
+                loading="lazy"
+                class="w-12 h-12"
+              />
+            </span>
+            <span class="font-semibold text-[32px] leading-[40px] tracking-[0%]">
+              {plan.price}
+            </span>
+          </div>
+          <div class="w-[85%] flex justify-center items-center border-b-[1px] border-[#4A4A4A] pb-4">
+            <span class="font-semibold text-[20px] leading-[25px]">
+              {plan.planName}
+            </span>
+          </div>
+          <div
+            class={`w-[85%] flex justify-center items-center ${!plan.teaser.status ? "border-b-[1px] pb-4" : ""} border-[#4A4A4A]`}
+          >
+            <span class="font-[400] leading-7 tracking-[0%] text-[20px] text-center">
+              {plan.description}
+            </span>
+          </div>
+          {plan.teaser.status && (
+            <span class="w-[85%] bg-black text-white font-semibold text-[16px] leading-[21.6px] tracking-[0%] text-center rounded-[8px] border-[1px] p-[8px_24px_8px_24px] gap-[10px]">
+              {plan.teaser.detail}
+            </span>
+          )}
+          {plan.services.map((service) => (
+            <div class="w-[85%] flex justify-center items-center ">
+              <div class="w-[20%] p-0.5  self-start">
+                <Image
+                  src={service.icon}
+                  format="svg"
+                  alt={"logo"}
+                  loading="lazy"
+                  class="object-contain w-7 h-7"
+                />
+              </div>
+              <div class="self-start w-[80%]">
+                <span class=" font-[400] text-[20px] leading-[27px] tracking-[0%] ">
+                  {service.detail}
+                </span>
+              </div>
+            </div>
+          ))}
+          <div class="w-[85%] pb-6">
+            <p class="font-[400] text-[20px] leading-[27px] tracking-[0%] text-center" set:html={plan.footer}>
+            </p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+<div class="w-[85%] flex flex-col items-center justify-center gap-4">
+    <p class="font-[400] text-[20px] leading-[27px] tracking-[0%] text-center">Not sure which tier fits you best? Let’s talk!</p>
+    <button class="w-[383px] max-md:w-auto h-[56px] rounded-[8px] border-[1px] p-[8px] bg-gradient-to-r from-[#E65E10] to-[#FF9355] text-center gap-2 max-md:h-[46px] text-white">
+        Secure My Spot—Let’s Talk.
+    </button>
+</div>
+  
+  </div>
+</div>
