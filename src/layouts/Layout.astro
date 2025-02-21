@@ -1,5 +1,5 @@
 ---
-import Footer from "../components/Home/Footer.astro"
+import Footer from "../components/Home/Footer.astro";
 import "../styles/global.css";
 ---
 <!doctype html>
@@ -25,9 +25,14 @@ import "../styles/global.css";
   html,
   body {
     margin: 0;
-    width: 100%;
+    max-width: 100%;
+    padding: 0px;
+    box-sizing: border-box;
     height: 100%;
     font-family: "Figtree", sans-serif;
-    background: #000;
+   background-image:url('../assets/bg-main.png');
+   background-size: cover;  
+  background-position: center;  
+  background-repeat: no-repeat;  
   }
 </style>
