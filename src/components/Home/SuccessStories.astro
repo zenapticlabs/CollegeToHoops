@@ -1,8 +1,6 @@
 ---
 import { Image } from "astro:assets";
 import player from "../../assets/success-player.svg";
-import nextbtn from "../../assets/next-btn.svg";
-import backbtn from "../../assets/back-btn.svg";
 ---
 <div class='w-full overflow-hidden flex justify-center items-center bg-gradient-to-b from-[black] to-[#000000e1] '>
     <div class="w-[90%]  flex flex-col justify-center items-center gap-16">
@@ -11,9 +9,7 @@ import backbtn from "../../assets/back-btn.svg";
         </div>
         <div class=" w-[85%] flex items-center justify-center gap-16 pb-16 max-lg:flex-col max-lg:w-full">
             <div class="w-[55%] flex justify-center items-center relative max-lg:w-full">
-                <div class="relative after:content-[url('src/assets/success-mark.svg')] 
-                    after:absolute after:top-[60px] after:left-[-100px] 
-                    after:w-full max-lg:after:w-2.5">
+                <div class="relative">
                     <Image src={player} format="svg" alt="logo" loading="lazy" class="w-[80%] h-[616px] rounded-2xl" />
                 </div>
                 <div class="font-bold flex justify-between items-center flex-col w-[490px] h-[231px] tracking-[0%] text-white bg-black absolute bottom-0 right-[-30px] rounded-2xl border-1 border-[#9EA1A1] p-6 max-lg:left-0 max-md:w-full max-md:h-auto">
@@ -31,11 +27,7 @@ import backbtn from "../../assets/back-btn.svg";
                 <div class="font-normal text-[20px] leading-[27px] w-[90%] tracking-normal text-white relative">
                     <p>Thomas Miles battled through multiple transfers, COVID disruptions, and limited playing time, yet his dedication never wavered. When he needed a fresh start, HoopsToCollege helped him land at Warner Pacific—his perfect fit—where he earned All-Conference honors and secured a fully covered education.</p>
                     <p class="mt-5">Now, Thomas is living his dream, starting his professional career in Germany. His journey proves that with resilience and the right support, overlooked athletes can achieve their goals. Stories like his drive HoopsToCollege’s mission to help players find the best path to success.</p>
-                </div>
-                <div class="w-[90%] flex justify-start items-center gap-5">
-                    <Image src={backbtn} format="svg" alt={"logo"} loading="lazy" class="w-[50px] h-[50px] mt-5" />
-                    <Image src={nextbtn} format="svg" alt={"logo"} loading="lazy" class="w-[50px] h-[50px] mt-5" />
-                </div>
+                </div>                
             </div>
         </div>
     </div>
