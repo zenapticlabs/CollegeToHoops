@@ -1,30 +1,40 @@
 ---
 import HeroSection from "./Home/HeroSection.astro";
-import Header from "../components/Home/Header.astro"
+import Header from "../components/Home/Header.astro";
 import { Image } from "astro:assets";
 import homeImg from "../assets/bgImg.png";
 import CollegeFitGuidance from "./Home/CollegeFitGuidance.astro";
 import RecruitingPlans from "./Home/RecruitingPlans.astro";
 import FreeRecruitingGuide from "./Home/FreeRecruitingGuide.astro";
 import SuccessStories from "./Home/SuccessStories.astro";
+import Testimonials from "./Home/Testimonials.jsx";
 ---
 
-<div id="container"  >
-  <div class="w-full h-[848px] overflow-hidden relative ">
+<div id="container">
+  <div class="w-full h-[848px] overflow-hidden relative">
     <Image
       src={homeImg}
       format="png"
       alt={""}
       loading="lazy"
-      class="w-full h-full"/>
-    <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#00000021]  to-black">
+      class="w-full h-full"
+    />
+    <div
+      class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#00000021] to-black"
+    >
       <Header />
-      <HeroSection />     
+      <HeroSection />
     </div>
   </div>
   <CollegeFitGuidance />
   <RecruitingPlans />
-  <SuccessStories />
-  <FreeRecruitingGuide />
+  <div class="bg-black">
+    <div class="bg-[url('src/assets/bg-main.png')] bg-center bg-cover">
+      <div class="bg-[#000000f3]">
+        <SuccessStories />
+        <Testimonials client:load />
+        <FreeRecruitingGuide />
+      </div>
+    </div>
+  </div>
 </div>
-

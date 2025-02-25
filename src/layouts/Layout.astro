@@ -1,5 +1,5 @@
 ---
-import Footer from "../components/Home/Footer.astro";
+import Footer from "../components/Home/Footer.astro"
 import "../styles/global.css";
 ---
 <!doctype html>
@@ -9,13 +9,10 @@ import "../styles/global.css";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://db.onlinewebfonts.com/c/65c105448a468d47474d8b97dfd27da7?family=Test+Founders+Grotesk+Text" rel="stylesheet" type="text/css"/>
     <title>CollegeToHoops</title>
   </head>
-  <body>
+  <body >
       <slot />
       <Footer />
   </body>
@@ -29,10 +26,6 @@ import "../styles/global.css";
     padding: 0px;
     box-sizing: border-box;
     height: 100%;
-    font-family: "Figtree", sans-serif;
-   background-image:url('../assets/bg-main.png');
-   background-size: cover;  
-  background-position: center;  
-  background-repeat: no-repeat;  
+   font-family: 'Founders Grotesk';
   }
 </style>
