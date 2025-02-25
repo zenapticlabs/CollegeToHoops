@@ -7,10 +7,10 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
     optimizeDeps: {
-      include: []
+      include: ["@splidejs/react-splide"]
     },
     ssr: {
-      noExternal: []
+      noExternal: ["@splidejs/react-splide"]
     }
   },
   integrations: [react()]
