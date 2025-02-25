@@ -1,0 +1,34 @@
+---
+import { Image } from "astro:assets";
+import player from "../../assets/success-player.svg";
+---
+<div class='w-full overflow-hidden flex justify-center items-center bg-gradient-to-b from-[black] to-[#000000e1] '>
+    <div class="w-[90%]  flex flex-col justify-center items-center gap-16">
+        <div class="w-full flex items-center justify-start ">
+            <p class="font-bold text-5xl leading-[60px] uppercase tracking-normal bg-gradient-to-b from-white to-gray-300 bg-clip-text text-transparent pt-16">Success Stories: From Overlooked to Recruited</p>
+        </div>
+        <div class=" w-[85%] flex items-center justify-center gap-16 pb-16 max-lg:flex-col max-lg:w-full">
+            <div class="w-[55%] flex justify-center items-center relative max-lg:w-full">
+                <div class="relative">
+                    <Image src={player} format="svg" alt="logo" loading="lazy" class="w-[80%] h-[616px] rounded-2xl" />
+                </div>
+                <div class="font-bold flex justify-between items-center flex-col w-[490px] h-[231px] tracking-[0%] text-white bg-black absolute bottom-0 right-[-30px] rounded-2xl border-1 border-[#9EA1A1] p-6 max-lg:left-0 max-md:w-full max-md:h-auto">
+                    <div class="text-[22px] font-normal relative after:content-[url('../assets/quotation.svg')] after:absolute after:left-[-30px] after:top-[-70px]">
+                        <p><span class="font-semibold">Before: </span>I had no coach responses & felt lost.</p>
+                        <p><span class="font-semibold">After:</span> Now I have 5 offers & just signed with a D2 program!</p>
+                    </div>
+                    <div class="w-full text-right text-[22px]">
+                        <p class="font-semibold">Thomas Miles</p>
+                        <p>From Overlooked to Pro</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-[45%] flex justify-end items-center flex-col max-lg:w-full">
+                <div class="font-normal text-[20px] leading-[27px] w-[90%] tracking-normal text-white relative">
+                    <p>Thomas Miles battled through multiple transfers, COVID disruptions, and limited playing time, yet his dedication never wavered. When he needed a fresh start, HoopsToCollege helped him land at Warner Pacific—his perfect fit—where he earned All-Conference honors and secured a fully covered education.</p>
+                    <p class="mt-5">Now, Thomas is living his dream, starting his professional career in Germany. His journey proves that with resilience and the right support, overlooked athletes can achieve their goals. Stories like his drive HoopsToCollege’s mission to help players find the best path to success.</p>
+                </div>                
+            </div>
+        </div>
+    </div>
+</div>

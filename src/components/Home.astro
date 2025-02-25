@@ -5,6 +5,8 @@ import { Image } from "astro:assets";
 import homeImg from "../assets/bgImg.png";
 import CollegeFitGuidance from "./Home/CollegeFitGuidance.astro";
 import RecruitingPlans from "./Home/RecruitingPlans.astro";
+import FreeRecruitingGuide from "./Home/FreeRecruitingGuide.astro";
+import SuccessStories from "./Home/SuccessStories.astro";
 ---
 
 <div id="container"  >
@@ -17,10 +19,12 @@ import RecruitingPlans from "./Home/RecruitingPlans.astro";
       class="w-full h-full"/>
     <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#00000021]  to-black">
       <Header />
-      <HeroSection />      
+      <HeroSection />     
     </div>
   </div>
   <CollegeFitGuidance />
   <RecruitingPlans />
+  <SuccessStories />
+  <FreeRecruitingGuide />
 </div>
 
