@@ -1,0 +1,56 @@
+---
+import { Image } from "astro:assets";
+import arrowUp from "../../assets/arrow-up-right.svg";
+---
+
+<div
+  class="container mx-auto gap-3 lg:gap-16 text-[#FFFFFF] flex w-full flex-col justify-center items-start h-full px-10 max-lg:py-3"
+>
+  <div class="">
+    <p
+      class="font-bold text-4xl text-[64px] uppercase mb-4 bg-gradient-to-r from-gray-200 to-white bg-clip-text text-transparent max-lg:text-[32px] max-lg:m-0"
+    >
+      Hi, I’m <br /> Myles Warren
+    </p>
+    <div class="flex flex-col justify-center items-start gap-6">
+      <p
+        class="font-normal text-[20px]  tracking-normal max-md:text-[12px] w-[40%] max-lg:w-full"
+      >
+        I’m Myles Warren - founder of HoopsToCollege.
+      </p>
+      <p
+        class="font-normal text-[20px]  tracking-normal max-md:text-[12px] w-[40%]  max-lg:w-full"
+      >
+      After bouncing between D1, Juco, and NAIA, I created this guide to
+      help you avoid the same pitfalls.
+      
+      </p>
+      <p
+        class="font-normal text-[20px]  tracking-normal max-md:text-[12px] w-[40%] max-lg:w-full"
+      >
+      If you’re feeling overwhelmed by NIL chatter, the transfer portal, and
+      Instagram highlight reels—take a breath. There’s still a place for
+      overlooked high school players. Let me show you how.
+      </p>
+    </div>
+  </div>
+
+  <div
+    class="text-white text-xl font-normal flex flex-col gap-3 max-md:text-xs"
+  >
+   
+    <button
+      class="animate-pulse w-[383px] h-[56px] rounded-[8px] border-[1px] p-[8px] bg-gradient-to-r from-[#E65E10] to-[#FF9355] flex items-center justify-center gap-2 max-md:h-[46px] max-md:w-[246px] cursor-pointer"
+    >
+      <span class="pt-[7px]">Find My Best College Fit – Let’s Talk </span>
+      <Image
+        src={arrowUp}
+        format="svg"
+        alt={""}
+        loading="lazy"
+        class="w-5 h-5"
+      />
+    </button>
+   
+  </div>
+</div>

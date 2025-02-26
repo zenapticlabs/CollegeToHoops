@@ -1,6 +1,39 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import PlayerImage from "../../assets/about-hero-player.jpeg"
+import Header from "../../components/Home/Header.astro";
+import HeroSection from "../../components/About/HeroSection.astro";
+import FounderMessage from "../../components/About/FounderMessage.astro";
 ---
 <Layout>
 
+    <div id="container">
+        <div class="w-full h-[848px] overflow-hidden relative max-lg:h-[530px]"> 
+            <div class="h-full w-full relative after:content-[url('src/assets/scratchy-overlay.jpeg')] after:absolute after:top-0 after:w-full after:h-full after:opacity-10">     
+                <Image
+                  src={PlayerImage}
+                  format="png"
+                  alt={""}
+                  loading="lazy"
+                  class="w-full h-full"
+                />
+                </div>
+          <div
+            class="absolute top-0 left-0 w-full h-full hero-gradient"
+          >
+            <Header />
+            <HeroSection />
+          </div>
+        </div>
+       
+        <div class="bg-black">
+          <div class="bg-[url('src/assets/bg-main.png')] bg-center bg-cover">
+            <div class="bg-[#000000f3]">
+              <FounderMessage />
+            </div>
+          </div>
+        </div>
+      </div>
+      
 </Layout>
