@@ -1,9 +1,47 @@
 ---
-import Home from '../components/Home.astro';
 import Layout from '../layouts/Layout.astro';
+import HeroSection from "../components/Home/HeroSection.astro";
+import Header from "../components/Home/Header.astro";
+import { Image } from "astro:assets";
+import homeImg from "../assets/bgImg.png";
+import CollegeFitGuidance from "../components/Home/CollegeFitGuidance.astro";
+import RecruitingPlans from "../components/Home/RecruitingPlans.astro";
+import FreeRecruitingGuide from "../components/Home/FreeRecruitingGuide.astro";
+import SuccessStories from "../components/Home/SuccessStories.astro";
+import Testimonials from "../components/Home/Testimonials.jsx";
 
 ---
 
 <Layout>
-	<Home />
+<div id="container">
+	<div class="w-full h-[848px] overflow-hidden relative max-lg:h-[530px]">
+	  <div class="h-full w-full relative after:content-[url('src/assets/scratchy-overlay.jpeg')] after:absolute after:top-0 after:w-full after:h-full after:opacity-20">
+	  <Image
+		src={homeImg}
+		format="png"
+		alt={""}
+		loading="lazy"
+		class="w-full h-full"
+	  />
+	  </div>
+	  <div
+		class="absolute top-0 left-0 w-full h-full hero-gradient"
+	  >
+		<Header />
+		<HeroSection />
+	  </div>
+	</div>
+	<CollegeFitGuidance />
+	<RecruitingPlans />
+	<div class="bg-black">
+	  <div class="bg-[url('src/assets/bg-main.png')] bg-center bg-cover">
+		<div class="bg-[#000000f3]">
+		  <SuccessStories />
+		  <Testimonials client:load />
+		  <FreeRecruitingGuide />
+		</div>
+	  </div>
+	</div>
+  </div>
+  
 </Layout>

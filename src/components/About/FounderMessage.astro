@@ -1,0 +1,63 @@
+---
+import { Image } from "astro:assets";
+import MilesHeadshot from "../../assets/myles_headshot.png"
+---
+<div class="w-full bg-black flex justify-center items-center ">
+    <div class="w-full flex justify-center items-center pt-[100px] pb-[100px] pl-[80px] pr-[80px] max-lg:flex-col max-lg:px-[30px] max-lg:pt-0">
+        <div class="w-[50%] flex justify-center items-center max-lg:w-full">
+            <div class=" w-[100%] flex justify-center items-center ">
+                <div>
+                    <div class="bg-[url('../assets/scratchy-overlay.jpeg')] bg-cover w-[90%] h-[600px] ">
+                        <div class="bg-[#000000ce] w-[100%] relative before:content-[''] before:absolute before:top-0 before:w-full before:h-full bg-custom-gradient">
+                        <Image src={MilesHeadshot} format="png" alt={"Myles"} loading="lazy"  class="w-[100%] h-[600px] object-cover object-center" />
+                    </div>
+                    </div>
+                    <div
+                    class="  bg-black  w-[90%] flex justify-center items-center text-[22px] border-1 border-[grey]  bg-[linear-gradient(0deg,#010101,#010101),radial-gradient(68.37%_68.37%_at_50%_31.63%,rgba(173,173,173,0.2)_0%,rgba(1,1,1,0.2)_100%)]  shadow-[0px_0px_250px_20px_rgba(203,203,203,0.2)] rounded-2xl relative bottom-[130px] after:content-[url('../assets/quotation.svg')] after:w-[80%] after:h-6 after:absolute  after:top-[-13px] after:left-[0px]"
+                  >
+                    <p class="w-[90%] text-[20px] text-white pb-6 pl-3 pr-3 pt-13">
+                      My high school journey seemed destined for a top D1 program—until
+                      injuries hit. I lost scholarship offers, scrambled for late
+                      interest, and discovered the hard way that “fit” matters more than
+                      hype.
+                    </p>
+                  </div>
+                </div>
+          
+        </div>
+        </div>
+        <div class="w-[50%] flex justify-center items-center max-lg:w-full">
+            <div class="w-[100%] text-white ">
+                <p class="text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500 font-bold text-[48px] leading-16 uppercase">
+                    Led by Experience.</br> Designed for Results.
+                </p>
+                <div class="w-full flex flex-col items-center gap-6 text-[20px] mb-11">
+                    <p>
+                        I’m Myles Warren, a former D1 athlete who battled through injuries, transfers, and the struggles of recruiting firsthand. I’ve lived the frustration of being overlooked, and I know what it takes to break through the noise and secure real college opportunities. That’s why I created HoopsToCollege—to give serious athletes a competitive edge that I wish I had.
+                    </p>
+                  <p>
+                    With direct connections to college coaches, a deep understanding of NCAA recruiting, and a proven track record of helping players maximize their offers, I’ve built a system that works. This isn’t just a program—it’s a roadmap designed for athletes who refuse to go unnoticed.
+                  </p>
+                </div>
+              <div class="flex flex-col justify-center items-start gap-3">
+                <p class="font-semibold text-[24px]">
+                    Myles Warren
+                </p>
+                <p>
+                    Founder, HoopsToCollege | Former D1 Athlete | Recruiting Expert
+                </p>
+
+              </p>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .bg-custom-gradient::before{
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 79.84%, #000000 100%),
+linear-gradient(360deg, rgba(0, 0, 0, 0) 76.57%, #000000 100%),
+linear-gradient(90deg, rgba(0, 0, 0, 0) 80.37%, #000000 102.2%),
+linear-gradient(270deg, rgba(0, 0, 0, 0) 83.96%, #000000 102.08%);
+
+    }
+</style>
