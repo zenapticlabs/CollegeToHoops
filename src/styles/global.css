@@ -85,3 +85,28 @@
 .hero-gradient{
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 35.56%, #000000 100%);
 }
+
+/* gradient */
+.border-grad{
+    width: fit-content;
+    display: block;
+    padding: 2px;
+    background: linear-gradient(74.17deg, #576265 13.43%, #9EA1A1 26.76%, #848B8A 47.44%, #576265 53.73%, #576265 77.78%, #757A7B 86.51%, #576265 95.7%),
+    radial-gradient(80.04% 80.04% at 0% -8.66%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+    background-size: 400% 400%;
+    animation: gradient 2s ease infinite;
+  }
+  @keyframes gradient{
+    0% {
+		background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  a, button{
+    cursor: pointer;
+  }
