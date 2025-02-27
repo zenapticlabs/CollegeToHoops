@@ -160,7 +160,7 @@ const subscriptionPlans = [
   >
     {
       subscriptionPlans.map(({ plan }) => (
-        <a  href={plan.link} target="_blank" class=`w-[308px] pt-4 pr-0 pb-1 pl-0 rounded-2xl bg-[#0E0E0E] flex flex-col items-center justify-center gap-6 relative ${plan.highlighted.detail ? 'border-2 border-solid shadow-[0px_0px_250px_20px_rgba(203,203,203,0.2)]' :""}`>
+        <a  href={plan.link} target="_blank" class=" w-[308px] pt-4 pr-0 pb-1 pl-0 rounded-2xl bg-[#0E0E0E] flex flex-col items-center justify-center gap-6 relative box-outline hover:outline-[2px] hover:outline-white hover:shadow-[0px_0px_250px_20px_rgba(203,203,203,0.2)]">
           {plan.highlighted.status && (
             <span class="min-w-[120px] w-[45%] bg-gradient-to-b from-[#FFFFFF] to-[#9E9B9B] text-black rounded-[8px] p-[2px_2px_2px_2px] absolute right-[10px] top-[-14px] font-[400] text-[16px] leading-[27px] text-center">
               {plan.highlighted.detail}
