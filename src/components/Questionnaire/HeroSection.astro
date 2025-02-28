@@ -1,0 +1,16 @@
+---
+import QuestionnaireForm from "./QuestionnaireForm.jsx"
+import FreeRecruitingGuide from "../Home/FreeRecruitingGuide.astro"
+---
+
+<div class="w-full flex justify-center gap-12 items-center   pt-32">
+    <div class="w-[41%]  ">
+        <p class="w-full max-w-lg  pl-[100px] font-bold text-6xl leading-[73.6px] bg-gradient-to-r from-[#C8C8C8] to-white text-transparent bg-clip-text relative bottom-35" >Your Path to Success Begins Here!
+            <span class="text-[20px] font-normal text-[#FFFFFF] block leading-[27px] mt">Help us understand your game and academic goals so we can guide you to the best college fit.</span>
+        </p>
+    </div>
+     <div class="w-[60%] flex justify-end mr-20 items center" >
+       <QuestionnaireForm client:load />
+        </div> 
+        
+</div>
