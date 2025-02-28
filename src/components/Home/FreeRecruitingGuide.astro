@@ -3,16 +3,17 @@ import { Image } from "astro:assets";
 import player from "../../assets/player.svg";
 ---
 
-<div class="w-full overflow-hidden flex justify-center items-center ">
+<div class="w-full overflow-hidden flex justify-center items-center pt-3.5">
+  <span class="border-grad rounded-2xl !w-[95%]"  >
   <div
-    class="w-[95%] border-solid border-gradient-to-r from-[#576265] via-[#9EA1A1] to-[#576265] gap-[24px] pt-[1.25%] pr-[1.5625%] pb-[1.25%] pl-[1.5625%] rounded-2xl border-[1px] flex justify-between items-center max-lg:flex-col"
+    class="gap-[24px] pt-[1.25%] pr-[1.5625%] pb-[1.25%] pl-[1.5625%] rounded-2xl flex justify-between items-center max-lg:flex-col overflow-hidden"
     style="background: linear-gradient(98.18deg, #963400 1.03%, #000000 100.39%);"
   >
     <div class="w-[50%] flex flex-col gap-6 max-lg:w-[90%]">
-      <p class="font-bold text-[48px] leading-[60px] tracking-[0%] uppercase text-white">
+      <p class="font-bold text-[48px] leading-[60px] tracking-[0%] max-md:text-[32px] uppercase text-white">
         FREE Recruiting Guide – Learn How to Get Noticed by College Coaches
       </p>
-      <span class="font-normal text-[20px] leading-[27px] tracking-[0%] text-white">
+      <span class="font-normal text-[20px] leading-[27px] tracking-[0%] text-white ">
         Enter your email below to get instant access to our step-by-step
         recruiting roadmap and start your journey toward college basketball
         today!
@@ -31,8 +32,9 @@ import player from "../../assets/player.svg";
     </div>
     </div>
     <div class="w-[50%] flex ">
-        <Image src={player} format="svg" alt={"logo"} loading="lazy" class="w-[100%] h-[100%] transform scale-120" />
+        <Image src={player} format="svg" alt={"logo"} loading="lazy" class="w-[100%] h-[100%] transform scale-120 mb-[2%]" />
       </div>
     </div>
   </div>
+  </span>
 </div>
