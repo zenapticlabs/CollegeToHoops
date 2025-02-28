@@ -1,0 +1,42 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Home/Header.astro";
+import questionnaireHero from "../../assets/questionnaire-hero.png";
+import HeroSection from "../../components/Questionnaire/HeroSection.astro";
+---
+
+<Layout>
+  <div class="w-full">
+    <div class="w-full h-[848px] overflow-hidden relative max-lg:h-[530px]">
+      <div
+        class="h-full w-full relative
+      after:content-[url('src/assets/scratchy-overlay.jpeg')]
+      after:absolute after:top-0 after:w-full after:h-full after:opacity-10
+      z-[11]
+      flex justify-center"
+      >
+        <div
+          class="w-full before:bg-[url('src/assets/questionaire-arena.jpeg')] before:absolute before:h-full before:w-full before:left-0 before:bg-cover before:bg-center before:bg-no-repeat before:opacity-80 before:z-10"
+        >
+          <div class="w-full h-full bg-[#4d310cec]">
+            <Image
+              src={questionnaireHero}
+              format="png"
+              alt={""}
+              loading="lazy"
+              class="w-[38%] h-full opacity-75 transform scale-90 grayscale-100 absolute left-[20%] bottom-[-7%] object-cover z-[15]"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute top-0 left-0 w-full h-full hero-gradient z-20">
+        <Header />
+        <HeroSection />
+      </div>
+    </div>
+
+  </div>
+</Layout>
+

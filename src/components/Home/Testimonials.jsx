@@ -3,56 +3,59 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 
 const testimonials = [
-    {
-        video_url:"src/assets/Roberto_Gittens_Testimonial.mp4",
-        description:" HoopstoCollege program changed my recruiting journey—now I have real offers on the table!",
-       nameOFInfluecer:"Roberto G."
-
-    },
   {
-    video_url: "src/assets/Roberto_Gittens_Testimonial.mp4",
-    description: "We had no idea where to start—now my son has real opportunities!",
+    video_url:
+      "https://res.cloudinary.com/dt3zbndrl/video/upload/v1740755154/testimonial_4_f08uaa.mp4",
+    description:
+      " HoopstoCollege program changed my recruiting journey—now I have real offers on the table!",
+    nameOFInfluecer: "Roberto G.",
+  },
+  {
+    video_url:
+      "https://res.cloudinary.com/dt3zbndrl/video/upload/v1740755157/testimonial_3_bttfh3.mp4",
+    description:
+      "We had no idea where to start—now my son has real opportunities!",
     nameOFInfluecer: "Adam K.",
   },
   {
-    video_url: "src/assets/Roberto_Gittens_Testimonial.mp4",
+    video_url:
+      "https://res.cloudinary.com/dt3zbndrl/video/upload/v1740755152/testimonial_2_euyowc.mp4",
     description:
       "Watching my son gain confidence and secure a scholarship was priceless. Thank you!",
     nameOFInfluecer: "Lily M.",
   },
   {
-    video_url:"src/assets/Roberto_Gittens_Testimonial.mp4",
-    description:" HoopstoCollege program changed my recruiting journey—now I have real offers on the table!",
-   nameOFInfluecer:"Roberto G."
-
-},
+    video_url:
+      "https://res.cloudinary.com/dt3zbndrl/video/upload/v1740755155/testimonial_1_ocrszl.mp4",
+    description: " From unknown to unstoppable—this process works.",
+    nameOFInfluecer: "Harry Jr.",
+  },
   {
-    video_url: "src/assets/Roberto_Gittens_Testimonial.mp4",
-    description: "We had no idea where to start—now my son has real opportunities!",
+    video_url:
+      "https://res.cloudinary.com/dt3zbndrl/video/upload/v1740755154/testimonial_4_f08uaa.mp4",
+    description:
+      " HoopstoCollege program changed my recruiting journey—now I have real offers on the table!",
+    nameOFInfluecer: "Roberto G.",
+  },
+  {
+    video_url:
+      "https://res.cloudinary.com/dt3zbndrl/video/upload/v1740755157/testimonial_3_bttfh3.mp4",
+    description:
+      "We had no idea where to start—now my son has real opportunities!",
     nameOFInfluecer: "Adam K.",
   },
   {
-    video_url: "src/assets/Roberto_Gittens_Testimonial.mp4",
+    video_url:
+      "https://res.cloudinary.com/dt3zbndrl/video/upload/v1740755152/testimonial_2_euyowc.mp4",
     description:
       "Watching my son gain confidence and secure a scholarship was priceless. Thank you!",
     nameOFInfluecer: "Lily M.",
   },
   {
-    video_url:"src/assets/Roberto_Gittens_Testimonial.mp4",
-    description:" HoopstoCollege program changed my recruiting journey—now I have real offers on the table!",
-   nameOFInfluecer:"Roberto G."
-
-},
-  {
-    video_url: "src/assets/Roberto_Gittens_Testimonial.mp4",
-    description: "We had no idea where to start—now my son has real opportunities!",
-    nameOFInfluecer: "Adam K.",
-  },
-  {
-    video_url: "src/assets/Roberto_Gittens_Testimonial.mp4",
-    description:
-      "Watching my son gain confidence and secure a scholarship was priceless. Thank you!",
-    nameOFInfluecer: "Lily M.",
+    video_url:
+      "https://res.cloudinary.com/dt3zbndrl/video/upload/v1740755155/testimonial_1_ocrszl.mp4",
+    description: " From unknown to unstoppable—this process works.",
+    nameOFInfluecer: "Harry Jr.",
   },
 ];
 
@@ -88,11 +91,11 @@ const Testimonials = () => {
         <div className="splide-container">
           <Splide
             options={{
-              perPage: 5, 
+              perPage: 5,
               type:"slide",
-              gap: "1rem", 
+              gap: "1rem",
               height: "auto",
-              arrows: true, 
+              arrows: true,
               perMove:5,
               focus: "center",
               pagination:false 
