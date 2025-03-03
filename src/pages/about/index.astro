@@ -1,7 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { Image } from "astro:assets";
-import PlayerImage from "../../assets/about-hero-player.jpeg"
 import Header from "../../components/Home/Header.astro";
 import HeroSection from "../../components/About/HeroSection.astro";
 import FounderMessage from "../../components/About/FounderMessage.astro";
@@ -14,8 +13,10 @@ import FreeRecruitingGuide from "../../components/Home/FreeRecruitingGuide.astro
         <div class="w-full h-[848px] overflow-hidden relative max-lg:h-[530px]"> 
             <div class="h-full w-full relative after:content-[url('src/assets/scratchy-overlay.jpeg')] after:absolute after:top-0 after:w-full after:h-full after:opacity-10">     
                 <Image
-                  src={PlayerImage}
+                  src={'https://res.cloudinary.com/dt3zbndrl/image/upload/v1740753129/about-hero-player_p3i8rv.png'}
                   format="png"
+                  width={100}
+                  height={100}
                   alt={""}
                   loading="lazy"
                   class="w-full h-full"

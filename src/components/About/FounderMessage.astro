@@ -1,6 +1,5 @@
 ---
 import { Image } from "astro:assets";
-import MilesHeadshot from "../../assets/myles_headshot.png"
 ---
 <div class="w-full bg-black flex justify-center items-center ">
     <div class="w-full flex justify-center items-center  pl-[80px] pr-[80px] max-lg:flex-col max-lg:px-[30px] max-lg:pt-0">
@@ -9,7 +8,7 @@ import MilesHeadshot from "../../assets/myles_headshot.png"
                 <div>
                     <div class="bg-[url('../assets/scratchy-overlay.jpeg')] bg-cover w-[90%] h-[600px] ">
                         <div class="bg-[#000000ce] w-[100%] relative before:content-[''] before:absolute before:top-0 before:w-full before:h-full bg-custom-gradient">
-                        <Image src={MilesHeadshot} format="png" alt={"Myles"} loading="lazy"  class="w-[100%] h-[600px] object-cover object-center" />
+                        <Image src={'https://res.cloudinary.com/dt3zbndrl/image/upload/v1740753130/myles_headshot_n0vacn.png'} width={100} height={100} format="png" alt={"Myles"} loading="lazy"  class="w-[100%] h-[600px] object-cover object-center" />
                     </div>
                     </div>
                     <div
@@ -53,11 +52,11 @@ import MilesHeadshot from "../../assets/myles_headshot.png"
     </div>
 </div>
 <style>
-    .bg-custom-gradient::before{
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 79.84%, #000000 100%),
-linear-gradient(360deg, rgba(0, 0, 0, 0) 76.57%, #000000 100%),
-linear-gradient(90deg, rgba(0, 0, 0, 0) 80.37%, #000000 102.2%),
-linear-gradient(270deg, rgba(0, 0, 0, 0) 83.96%, #000000 102.08%);
+    .bg-custom-gradient::before {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 79.84%, #000000 100%),
+    linear-gradient(360deg, rgba(0, 0, 0, 0) 76.57%, #000000 100%),
+    linear-gradient(90deg, rgba(0, 0, 0, 0) 80.37%, #000000 102.2%),
+    linear-gradient(270deg, rgba(0, 0, 0, 0) 83.96%, #000000 102.08%);
+}
 
-    }
 </style>

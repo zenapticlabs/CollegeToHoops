@@ -45,7 +45,9 @@ const guidanceItems = [
       <div class="relative">
         <span class="border-grad rounded-[12px]">
         <Image
-          src={college_fit_guidance}
+          src={'https://res.cloudinary.com/dt3zbndrl/image/upload/v1740753130/college-fit-guidance_ucomgx.png'}
+          width={100}
+          height={100}
           format="png"
           alt={"logo"}
           loading="lazy"
@@ -85,7 +87,7 @@ const guidanceItems = [
     }
   </div>
   <span class="border-grad rounded-[8px]">
-  <button
+  <button onclick="document.getElementById('recruiting-plans').scrollIntoView({ behavior: 'smooth' })"
     class="animate-pulse w-[383px] pb-0 max-md:w-auto h-[56px] rounded-[8px]  p-[8px] bg-gradient-to-r from-[#E65E10] to-[#FF9355] text-center gap-2 max-md:h-[46px] text-white "
   >
     Find My Best College Fit—Start Now
