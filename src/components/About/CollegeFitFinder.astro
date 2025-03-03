@@ -1,6 +1,5 @@
 ---
 import { Image } from "astro:assets";
-import AboutFinder from "../../assets/about-finder.jpeg";
 ---
 
 <div class="w-full">
@@ -22,8 +21,9 @@ import AboutFinder from "../../assets/about-finder.jpeg";
               class="border-grad rounded-2xl shadow-[0px_0px_250px_20px_rgba(203,203,203,0.1)] transform scale-115"
             >
               <Image
-                src={AboutFinder}
-                format="png"
+                src={"https://res.cloudinary.com/dt3zbndrl/image/upload/v1740753128/about-finder_ccfmcd.jpg"}
+                width={100}
+                height={100}
                 alt={"Myles"}
                 loading="lazy"
                 class="w-[100%] rounded-2xl"
