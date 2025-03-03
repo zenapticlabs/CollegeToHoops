@@ -140,7 +140,7 @@ const subscriptionPlans = [
 ];
 ---
 
-<div
+<div id="recruiting-plans"
   class="w-full bg-black text-white flex flex-col justify-center items-center gap-16 pb-4"
 >
   <div class="flex flex-col items-center justify-center">
@@ -155,7 +155,7 @@ const subscriptionPlans = [
       Choose the right level of support to match your goals.
     </span>
   </div>
-  <div
+  <div 
     class="w-[90%] bg-black gap-2 flex justify-center items-start max-md:flex-col max-md:items-center max-md:gap-5"
   >
     {
@@ -227,7 +227,7 @@ const subscriptionPlans = [
 <div class="w-[85%] flex flex-col items-center justify-center gap-4">
     <p class="font-[400] text-[20px] leading-[27px] tracking-[0%] text-center">Not sure which tier fits you best? Let’s talk!</p>
     <span class="border-grad rounded-[8px]">
-    <button class="animate-pulse w-[383px] max-md:w-auto h-[56px] pb-0 rounded-[8px]  p-[8px] bg-gradient-to-r from-[#E65E10] to-[#FF9355] text-center gap-2 max-md:h-[46px] text-white">
+    <button onclick="document.getElementById('recruiting-plans').scrollIntoView({ behavior: 'smooth' })" class="animate-pulse w-[383px] max-md:w-auto h-[56px] pb-0 rounded-[8px]  p-[8px] bg-gradient-to-r from-[#E65E10] to-[#FF9355] text-center gap-2 max-md:h-[46px] text-white">
         Secure My Spot—Let’s Talk.
     </button>
   </span>
