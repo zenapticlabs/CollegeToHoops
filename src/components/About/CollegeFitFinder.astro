@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 
 <div class="w-full">
   <div class="w-full bg-black">
-    <div class="w-full bg-[url('src/assets/bg-main.png')] bg-center bg-cover">
+    <div class="w-full bg-[url('/assets/bg-main.png')] bg-center bg-cover">
       <div
         class="w-full bg-[#000000f8] flex justify-center items-center pt-[100px] pb-[100px] pl-[80px] pr-[80px] max-lg:p-5"
       >
@@ -24,8 +24,7 @@ import { Image } from "astro:assets";
                 src={"https://res.cloudinary.com/dt3zbndrl/image/upload/v1740753128/about-finder_ccfmcd.jpg"}
                 width={100}
                 height={100}
-                alt={"Myles"}
-                loading="lazy"
+                alt={"Myles"}                 
                 class="w-[100%] rounded-2xl"
               />
             </span>

@@ -1,10 +1,10 @@
 ---
 import { Image } from "astro:assets";
-import college_fit_guidance from "../../assets/college-fit-guidance.png";
-import play_opacity from "../../assets/play-opacity.svg";
-import shooting_star from "../../assets/shooting-star.svg";
-import target from "../../assets/target.svg";
-import rocket from "../../assets/rocket.svg";
+import college_fit_guidance from "../../../public/assets/college-fit-guidance.png";
+import play_opacity from "../../../public/assets/play-opacity.svg";
+import shooting_star from "../../../public/assets/shooting-star.svg";
+import target from "../../../public/assets/target.svg";
+import rocket from "../../../public/assets/rocket.svg";
 const guidanceItems = [
   {
     image: shooting_star,
@@ -49,16 +49,14 @@ const guidanceItems = [
           width={100}
           height={100}
           format="png"
-          alt={"logo"}
-          loading="lazy"
+          alt={"logo"}           
           class="w-[854px] h-[480px] m-auto object-cover object-top shadow-[0px_0px_150px_rgba(255,255,255,0.2)] rounded-[12px] z-10"
         />
       </span>
         <Image
           src={play_opacity}
           format="svg"
-          alt={"logo"}
-          loading="lazy"
+          alt={"logo"}          
           class="absolute inset-0 m-auto w-12 h-12 object-cover"
         />      
       </div>
@@ -73,8 +71,7 @@ const guidanceItems = [
               <Image
                 src={item.image}
                 format="svg"
-                alt={"logo"}
-                loading="lazy"
+                alt={"logo"}                
                 class="w-12 h-12"
               />
             </span>
