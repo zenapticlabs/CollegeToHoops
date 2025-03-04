@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import player from "../../assets/player.svg";
+import player from "../../../public/assets/player.svg";
 ---
 
 <div class="w-full overflow-hidden flex justify-center items-center pt-3.5">
@@ -32,7 +32,7 @@ import player from "../../assets/player.svg";
     </div>
     </div>
     <div class="w-[50%] flex ">
-        <Image src={player} format="svg" alt={"logo"} loading="lazy" class="w-[100%] h-[100%] transform scale-120 mb-[2%]" />
+        <Image src={player} format="svg" alt={"logo"}   class="w-[100%] h-[100%] transform scale-120 mb-[2%]" />
       </div>
     </div>
   </div>
