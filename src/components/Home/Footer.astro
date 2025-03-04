@@ -1,10 +1,10 @@
 ---
 import { Image } from "astro:assets";
-import footer_img from "../../assets/footer-img.svg";
-import twitter from "../../assets/twitter.svg";
-import discord from "../../assets/discord.svg";
-import youtube from "../../assets/youtube.svg";
-import tiktok from "../../assets/tiktok.svg"
+import footer_img from "../../../public/assets/footer-img.svg";
+import twitter from "../../../public/assets/twitter.svg";
+import discord from "../../../public/assets/discord.svg";
+import youtube from "../../../public/assets/youtube.svg";
+import tiktok from "../../../public/assets/tiktok.svg"
 ---
 
 <div>
@@ -12,23 +12,22 @@ import tiktok from "../../assets/tiktok.svg"
     <Image
     src={footer_img}
     format="svg"
-    alt={""}
-    loading="lazy"
+    alt={""}    
     class="w-full h-full"
   />
     </div>
     <div class="bg-black">
-        <div class="bg-[url('src/assets/bg-main.png')] bg-center bg-cover">
+        <div class="bg-[url('/assets/bg-main.png')] bg-center bg-cover">
           <div class="bg-[#000000ef]">
     <div class=" h-[120px] flex items-center justify-between text-[20px] text-white p-5  ">
         <span>
             @ 2025 Hoops to College. All rights reserved.
         </span>
         <span class="flex items-center  gap-4">
-            <Image src={twitter} format="svg" alt={"logo"} loading="lazy"  />
-            <Image src={discord} format="svg" alt={"logo"} loading="lazy"  />
-            <Image src={youtube} format="svg" alt={"logo"} loading="lazy"  />
-            <Image src={tiktok} format="svg" alt={"logo"} loading="lazy"  />
+            <Image src={twitter} format="svg" alt={"logo"}    />
+            <Image src={discord} format="svg" alt={"logo"}    />
+            <Image src={youtube} format="svg" alt={"logo"}    />
+            <Image src={tiktok} format="svg" alt={"logo"}    />
          </span>
          <span class="flex items-center  gap-2.5">
             <span>

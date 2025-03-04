@@ -87,7 +87,7 @@ const Testimonials = () => {
       <div className="w-[80%] font-bold text-5xl leading-[60px] uppercase tracking-normal text-center text-transparent bg-clip-text bg-gradient-to-r from-[#9E9B9B] to-white">
         What Real Athletes & Parents Say About HoopsToCollege
       </div>
-      <div className="w-full  flex justify-center items-center gap-6">
+      <div className="w-full  flex justify-center items-center gap-6 cursor-pointer">
         <div className="splide-container">
           <Splide
             options={{
@@ -115,15 +115,14 @@ const Testimonials = () => {
                   </video>
                   <div id={`overlay-${index}`} className="overlay">
                     <img
-                      src="src/assets/play-opacity.svg"
-                      alt="logo"
-                      loading="lazy"
+                      src="./assets/play-opacity.svg"
+                      alt="logo"                       
                       className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                     />
                     <div
                       className="absolute top-0 left-0 w-full h-full flex flex-col justify-end items-end bg-gradient-to-b from-transparent to-black text-white text-base p-4 leading-normal"
                     >
-                      <p className="mb-2 relative after:content-[url('../assets/square-quot.svg')] after:absolute after:left-[-20px] after:top-[-40px]">
+                      <p className="mb-2 relative after:content-[url('../../public/assets/square-quot.svg')] after:absolute after:left-[-20px] after:top-[-40px]">
                         {testimonial.description}
                       </p>
                       <span>{testimonial.nameOFInfluecer}</span>
