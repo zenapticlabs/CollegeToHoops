@@ -1,0 +1,38 @@
+---
+import Layout from '../../../src/layouts/Layout.astro';
+import Header from "../../components/Home/Header.astro";
+import { Image } from "astro:assets";
+import FreeRecruitingGuide from "../..//components/Home/FreeRecruitingGuide.astro";
+import HeroSection from '../../components/Contact/HeroSection.astro';
+import ContactHero from '../../../public/assets/contact-hero.jpeg'
+
+---
+
+<Layout>
+<div id="container">
+	<div class="w-full h-[820px] overflow-hidden relative max-lg:h-auto bg-[#000000e5]">
+	  <div class="h-full w-full relative after:content-[url('/assets/scratchy-overlay.jpeg')] after:absolute after:top-0 after:w-full after:h-full after:opacity-[0.1] ">
+	  <Image
+		src={ContactHero}
+		format="png"
+		alt={""}
+		class="w-full h-full z-50 opacity-40"
+	  />
+	  </div>
+	  <div
+		class="absolute top-0 left-0 w-full h-full hero-gradient"
+	  >
+		<Header />
+		<HeroSection />
+	  </div>
+	</div>
+	<div class="bg-black">
+	  <div class="bg-[url('/assets/bg-main.png')] bg-center bg-cover">
+		<div class="bg-[#000000f3]">
+		  <FreeRecruitingGuide />
+		</div>
+	  </div>
+	</div>
+  </div>
+  
+</Layout>
