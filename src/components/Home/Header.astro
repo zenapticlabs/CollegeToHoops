@@ -12,10 +12,10 @@ import headerLogo from "../../../public/assets/header-logo.svg";
     <a href="/questionnaire" class="font-semibold text-[16px] leading-[21.6px] nav-link " id="questionnaire"  >Questionnaire</a>
   </div>
     <a href="/" class="block w-[178px] h-[64px] p-2 "  id="home">
-      <Image src={headerLogo} format="svg" alt={"logo"}    />
+      <Image src={headerLogo} format="svg" alt={"logo"} id="home-child"   />
     </a>
   <div class="flex items-center gap-6">
-    <span class="font-semibold text-[16px] leading-[21.6px]">Contact</span>
+    <a href="/contact" class="font-semibold text-[16px] leading-[21.6px] nav-link cursor-pointer pt-1.5" id="contact">Contact</a>
     <button class="font-semibold text-[16px]  bg-black  w-[129px] h-[44px] rounded-[8px] border-[1px] p-[8px] pt-[11px]" >Get Started</button>
   </div>
 </header>
@@ -24,14 +24,15 @@ import headerLogo from "../../../public/assets/header-logo.svg";
   const navLinks = {
     "/about": "about",
     "/questionnaire":"questionnaire" ,
-    "/": "home"
+    "/": "home",
+    "/contact" :"contact"
   };
 
   const activeLinkId = navLinks[path as keyof typeof navLinks];
   if (activeLinkId) {
     const activeElement = document.getElementById(activeLinkId);
     if (activeElement) {
-      activeElement.style.color = "orange";
+      activeElement.style.color = "#E65E10";
     }
   }
 </script>
