@@ -83,7 +83,7 @@ const playVideo = (index) => {
 
 const Testimonials = () => {
   return (
-    <div className="w-full flex flex-col justify-center items-center gap-7 py-[170px] overflow-hidden max-lg:w-[600px]">
+    <div className="max-lg:hidden w-full flex flex-col justify-center items-center gap-7 pt-[100px] pb-[170px] overflow-hidden max-lg:w-[600px]">
       <div className="w-[80%] font-bold text-5xl leading-[60px] uppercase tracking-normal text-center text-transparent bg-clip-text bg-gradient-to-r from-[#9E9B9B] to-white">
         What Real Athletes & Parents Say About HoopsToCollege
       </div>

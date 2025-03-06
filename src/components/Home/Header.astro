@@ -1,24 +1,47 @@
 ---
 import { Image } from "astro:assets";
 import headerLogo from "../../../public/assets/header-logo.svg";
-
+import list from "../../../public/assets/list.svg"
 ---
 
 <header
   class="flex items-center justify-between px-[24px] py-[12px] w-full text-[#FFFFFF] h-[80px]"
 >
-  <div class="flex items-center gap-6">
+  <div class="flex items-center gap-6 max-lg:hidden">
       <a class="font-semibold text-[16px] leading-[21.6px] nav-link " id="about" href="/about">About Myles</a>
     <a href="/questionnaire" class="font-semibold text-[16px] leading-[21.6px] nav-link " id="questionnaire"  >Questionnaire</a>
   </div>
-    <a href="/" class="block w-[178px] h-[64px] p-2 "  id="home">
+    <a href="/" class="block w-[178px] h-[64px] p-2 max-lg:pl-0 max-lg:relative max-lg:right-4 "  id="home">
       <Image src={headerLogo} format="svg" alt={"logo"} id="home-child"   />
     </a>
-  <div class="flex items-center gap-6">
-    <a href="/contact" class="font-semibold text-[16px] leading-[21.6px] nav-link cursor-pointer pt-1.5" id="contact">Contact</a>
-    <button class="font-semibold text-[16px]  bg-black  w-[129px] h-[44px] rounded-[8px] border-[1px] p-[8px] pt-[11px]" >Get Started</button>
+  <div class="flex items-center gap-6 ">
+    <a href="/contact" class="font-semibold text-[16px] leading-[21.6px] nav-link cursor-pointer pt-1.5 max-lg:hidden" id="contact">Contact</a>
+    <button class="font-semibold text-[16px]  bg-black  w-[129px] h-[44px] rounded-[8px] border-[1px] p-[8px] pt-[11px] max-lg:hidden" onclick="document.getElementById('download-now').scrollIntoView({ behavior: 'smooth' });" >Get Started</button>
+    <span id="nav-bar" class="hidden max-lg:block">
+      <Image src={list} format="svg" loading="lazy" alt={"menu"}  class="w-[24px] " id="icon"  />
+    </span>
   </div>
 </header>
+<div
+  class="fixed w-[60vw] right-0 hidden z-100 px-[20px] py-[24px] bg-[#00000028]"
+  id="menu"
+  style="height:calc(100vh - 66px)"
+>
+  <div class="absolute inset-0 bg-transparent backdrop-blur-xl z-0"></div>
+  <div class="relative w-full h-full flex flex-col justify-between items-between z-10">
+    <div class="flex items-center flex-col justify-center gap-6 w-full">
+      <a class="font-semibold block text-[16px] text-white rounded-[8px] bg-black pt-4 pb-3.5 w-full text-center" id="about" href="/about">About Myles</a>
+      <a href="/questionnaire" class="font-semibold block text-[16px]  text-white rounded-[8px] pt-4 pb-3.5 w-full text-center" id="questionnaire">Questionnaire</a>
+    </div>
+    
+    <div class="flex items-center flex-col justify-center gap-6 w-[95%]">
+      <a href="/contact" class="font-semibold block text-[16px] text-white  rounded-[8px] pt-4 pb-3.5 w-full text-center" id="contact">Contact</a>
+      
+      <button class="font-semibold block text-[16px] bg-black border-[1px] border-white text-white rounded-[8px] pt-4 pb-3.5  w-full text-center " onclick="document.getElementById('download-now').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto'; document.getElementById('icon').src='/assets/list.svg'">Get Started</button>
+    </div>
+  </div>
+</div>
+
 <script>
   const path = window.location.pathname;
   const navLinks = {
@@ -35,7 +58,29 @@ import headerLogo from "../../../public/assets/header-logo.svg";
       activeElement.style.color = "#E65E10";
     }
   }
+  document.getElementById("nav-bar")?.addEventListener("click", () => {
+    const icon = document.getElementById("icon");
+    if (icon && icon instanceof HTMLImageElement) {
+      if (icon.src.includes("close")) {
+        icon.src = "/assets/list.svg";
+      } else {
+        icon.src = "/assets/close.svg";
+      }
+    }
+    const navBar = document.getElementById("menu");
+    if (navBar) {
+      if (navBar.style.display === "none" || navBar.style.display === "") {
+        navBar.style.display = "block";
+
+        document.body.style.overflow = "hidden";
+      } else {
+        navBar.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+    }
+  });
+
+ 
 </script>
-     
  
 

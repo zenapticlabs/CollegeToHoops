@@ -83,7 +83,7 @@
     fill: #fff !important;
 }
 .hero-gradient{
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 35.56%, #000000 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 35.56%, #000000e5 100%);
 }
 
 /* gradient */
@@ -110,4 +110,6 @@
   a, button{
     cursor: pointer;
   }
- 
+ body{
+  background-color: #000000;
+ }

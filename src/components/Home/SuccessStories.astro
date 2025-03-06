@@ -2,17 +2,17 @@
 import { Image } from "astro:assets";
 import player from "../../../public/assets/success-player.svg";
 ---  
-<div class="w-full overflow-hidden flex justify-center items-center bg-gradient-to-b from-[black] to-[#000000f3] "> 
-    <div class="w-[90%]  flex flex-col justify-center items-center ">
+<div class="w-full overflow-hidden flex justify-center items-center bg-gradient-to-b from-[black] to-[#00000031]  relative top-[-2px]"> 
+    <div class="w-[90%]  flex flex-col justify-center items-center pb-12 ">
         <div class="w-full flex items-center justify-start ">
             <p class="font-bold text-[48px] leading-[60px] uppercase tracking-[0%] bg-gradient-to-b from-white to-[#9E9B9B] bg-clip-text text-transparent pt-16">Success Stories:<br/> From Overlooked to Recruited</p>
         </div>
         <div class=" w-[90%] flex items-center justify-center gap-16 pb-16 max-lg:flex-col max-lg:w-full">
             <div class="w-[55%] flex justify-start items-center relative max-lg:w-full">
                 <div class="relative  ">
-                    <Image src={player} format="svg" alt="logo"   class="w-[80%] h-[616px] rounded-2xl" />
+                    <Image src={player} format="svg" alt="logo"   class="w-[80%]  h-[616px] max-lg:w-full max-lg:h-full rounded-2xl" />
                 </div>
-                <div class=" flex justify-between items-center flex-col w-[490px] h-[231px] tracking-[0%] text-white z-10 bg-black absolute bottom-0 left-[120px] rounded-2xl border-1 border-[#9EA1A1] p-6 max-lg:left-0 max-md:w-full max-md:h-auto bg-[linear-gradient(0deg,#010101,#010101),radial-gradient(68.37%_68.37%_at_50%_31.63%,rgba(173,173,173,0.2)_0%,rgba(1,1,1,0.2)_100%)]  shadow-[0px_0px_250px_20px_rgba(203,203,203,0.2)]">
+                <div class=" flex justify-between items-center flex-col w-[490px] h-[231px] max-lg:w-full  tracking-[0%] text-white z-10 bg-black absolute bottom-0 left-[120px] rounded-2xl border-1 border-[#9EA1A1] p-6 max-lg:left-0 max-md:w-full max-md:h-auto bg-[linear-gradient(0deg,#010101,#010101),radial-gradient(68.37%_68.37%_at_50%_31.63%,rgba(173,173,173,0.2)_0%,rgba(1,1,1,0.2)_100%)]  shadow-[0px_0px_120px_20px_rgba(203,203,203,0.15)]">
                     <div class="text-[22px]  relative after:content-[url('/assets/quotation.svg')] after:absolute after:left-[-30px] after:top-[-70px]  ">
                         <p class="font-[400]"><span class="font-[600]">Before: </span>I had no coach responses & felt lost.</p>
                         <p class="font-[400]"><span class="font-[600]">After:</span> Now I have 5 offers & just signed with a D2 program!</p>
