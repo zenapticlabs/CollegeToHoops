@@ -56,37 +56,46 @@
     }
 }
 
-.splide__arrow--next , .splide__arrow--prev{
-    position: absolute !important;
-    z-index: 20 !important;
-    padding: 10px !important;
-    background-color: black !important;
-    color: white !important;
-    width: 48px !important;
-    height: 48px !important;
-    margin: 30px 0px !important;
-    border: 1px solid #e4e4e4 !important;
-    
-    border-radius: 8px !important;
-
+.splide__arrow--next, .splide__arrow--prev {
+  position: absolute !important;
+  z-index: 20 !important;
+  padding: 10px !important;
+  background-color: black !important;
+  color: white !important;
+  width: 48px !important;
+  height: 48px !important;
+  margin: 30px 0px !important;
+  border: 1px solid #e4e4e4 !important;
+  border-radius: 8px !important;
 }
 
-.splide__arrow--next{
-    top: 600px !important;
-    right: 46vw !important;
-}
-.splide__arrow--prev{
-    top: 600px !important;
-    left: 46vw !important;
-}
-.splide__arrow--prev svg ,.splide__arrow--next svg{
-    fill: #fff !important;
-}
-.hero-gradient{
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 35.56%, #000000e5 100%);
+.splide__arrow--next {
+  top: 590px !important;
+  right: 46vw !important;
 }
 
-/* gradient */
+.splide__arrow--prev {
+  top: 590px !important;
+  left: 47vw !important;
+}
+
+.splide__arrow--prev svg, .splide__arrow--next svg {
+  fill: #fff !important;
+}
+
+.hero-gradient {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 35.56%, #000000ec 100%);
+}
+
+@media (max-width: 1200px)  {
+  .splide__arrow--next {
+      display: none !important;
+  }
+  .splide__arrow--prev {
+      display: none !important ;
+  }
+}
+
 .border-grad{
     width: fit-content;
     display: block;
@@ -112,4 +121,5 @@
   }
  body{
   background-color: #000000;
+  overflow-x: hidden;
  }

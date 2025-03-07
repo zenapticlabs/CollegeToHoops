@@ -4,7 +4,7 @@ import footer_img from "../../../public/assets/footer-img.svg";
 import twitter from "../../../public/assets/twitter.svg";
 import discord from "../../../public/assets/discord.svg";
 import youtube from "../../../public/assets/youtube.svg";
-import tiktok from "../../../public/assets/tiktok.svg"
+import tiktok from "../../../public/assets/tiktok.svg";
 ---
 
 <div>
@@ -18,29 +18,30 @@ import tiktok from "../../../public/assets/tiktok.svg"
     </div>
     <div class="bg-black">
         <div class="bg-[url('/assets/bg-main.png')] bg-center bg-cover">
-          <div class="bg-[#000000ef]">
-    <div class=" h-[120px] flex items-center justify-between text-[20px] text-white p-5  ">
-        <span>
-            @ 2025 Hoops to College. All rights reserved.
-        </span>
-        <span class="flex items-center  gap-4">
-            <Image src={twitter} format="svg" alt={"logo"}    />
-            <Image src={discord} format="svg" alt={"logo"}    />
-            <Image src={youtube} format="svg" alt={"logo"}    />
-            <Image src={tiktok} format="svg" alt={"logo"}    />
-         </span>
-         <span class="flex items-center  gap-2.5">
-            <span>
-                Term & Conditions
-            </span>
-            <span class="w-[5px] h-[5px] rounded-full bg-[#000000]">
-            </span>
-            <span>
-                Privacy Policies
-            </span>
-         </span>
-    </div>
-    </div>
+            <div class="bg-[#000000ef]">
+                <div class="h-[120px] max-lg:pb-10 max-lg:h-[176px] max-lg:pt-4 flex items-center justify-between  text-white p-5 max-lg:flex-col max-lg:text-center max-lg:p-3">
+                    <span class="max-lg:mb-4 font-normal text-[20px] max-lg:text-[14px] ">
+                        @ 2025 Hoops to College. All rights reserved.
+                    </span>
+
+                    <span class="flex items-center gap-4 max-lg:justify-center max-lg:mb-4">
+                        <Image src={twitter} format="svg" alt={"logo"} class="max-lg:w-6" />
+                        <Image src={discord} format="svg" alt={"logo"} class="max-lg:w-6" />
+                        <Image src={youtube} format="svg" alt={"logo"} class="max-lg:w-6" />
+                        <Image src={tiktok} format="svg" alt={"logo"} class="max-lg:w-6" />
+                    </span>
+
+                    <span class="flex items-center text-[20px]  max-lg:text-[14px] gap-2.5  max-lg:gap-1 max-lg:justify-center ">
+                        <span class="block font-normal">
+                            Term & Conditions  
+                        </span>
+                        <span class="block pb-[7px] font-bold mx-1.5 text-gray-400 ">.</span>
+                        <span class="block font-normal">
+                            Privacy Policies
+                        </span>
+                    </span>
+                </div>
+            </div>
         </div>
-        </div>
+    </div>
 </div>

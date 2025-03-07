@@ -83,12 +83,13 @@ const playVideo = (index) => {
 
 const Testimonials = () => {
   return (
-    <div className="max-lg:hidden w-full flex flex-col justify-center items-center gap-7 pt-[100px] pb-[170px] overflow-hidden max-lg:w-[600px]">
+    <div className="w-[100vw] justify-center items-center flex ">
+    <div className="w-full flex flex-col justify-center items-center gap-7 pt-[100px] pb-[170px] overflow-hidden max-lg:w-[600px]">
       <div className="w-[80%] font-bold text-5xl leading-[60px] uppercase tracking-normal text-center text-transparent bg-clip-text bg-gradient-to-r from-[#9E9B9B] to-white">
         What Real Athletes & Parents Say About HoopsToCollege
       </div>
-      <div className="w-full  flex justify-center items-center gap-6 cursor-pointer">
-        <div className="splide-container">
+      <div className="w-full flex justify-center items-center gap-6 cursor-pointer">
+        <div className="splide-container max-lg:px-[20px]">
           <Splide
             options={{
               perPage: 5,
@@ -98,31 +99,35 @@ const Testimonials = () => {
               arrows: true,
               perMove:5,
               focus: "center",
-              pagination:false 
-             
+              pagination: false,
+              breakpoints: {
+                1024: {
+                  perPage: 1.1,
+                  perMove:2
+                },
+               
+              },
             }}
           >
             {testimonials.map((testimonial, index) => (
               <SplideSlide
-                className="w-[250px]  rounded-xl"
+                className=" max-lg:!mr-[15px] rounded-xl"
                 key={index}
                 onClick={() => playVideo(index)}
               >
-                <div className="relative w-full h-auto rounded-xl overflow-hidden">
-                  <video id={`video-${index}`} className="w-full">
+                <div className="relative w-full h-auto rounded-xl    overflow-hidden">
+                  <video id={`video-${index}`} className="w-full ">
                     <source src={testimonial.video_url} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                   <div id={`overlay-${index}`} className="overlay">
                     <img
                       src="./assets/play-opacity.svg"
-                      alt="logo"                       
+                      alt="logo"
                       className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                     />
-                    <div
-                      className="absolute top-0 left-0 w-full h-full flex flex-col justify-end items-end bg-gradient-to-b from-transparent to-black text-white text-base p-4 leading-normal"
-                    >
-                      <p className="mb-2 relative after:content-[url('../../public/assets/square-quot.svg')] after:absolute after:left-[-20px] after:top-[-40px]">
+                    <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-end items-end bg-gradient-to-b from-transparent to-black text-white text-base p-4 leading-normal">
+                      <p className="mb-2 relative after:content-[url('../../public/assets/square-quot.svg')] after:absolute after:left-[-20px] after:top-[-40px] max-lg:text-[16px] max-lg:font-normal">
                         {testimonial.description}
                       </p>
                       <span>{testimonial.nameOFInfluecer}</span>
@@ -134,6 +139,7 @@ const Testimonials = () => {
           </Splide>
         </div>
       </div>
+    </div>
     </div>
   );
 };
