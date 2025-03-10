@@ -2,23 +2,23 @@
 import { Image } from "astro:assets";
 ---
 
-<div class="w-full">
-  <div class="w-full bg-black">
-    <div class="w-full bg-[url('/assets/bg-main.png')] bg-center bg-cover">
+<div class="w-full  ">
+  <div class="w-full bg-black ">
+    <div class="w-full bg-[url('/assets/bg-main.png')] bg-center bg-cover " >
       <div
-        class="w-full bg-[#000000f8] flex justify-center items-center pt-[100px] pb-[100px] pl-[80px] pr-[80px] max-lg:p-5"
+        class="w-full bg-[#000000f8] relative top-[-2px] flex justify-center items-center pt-[100px] pb-[100px]  pl-[80px] pr-[80px] max-lg:p-5"
       >
         <div
-          class="w-[50%] max-xl:w-[55%] max-lg:w-[60%] max-md:w-[90%] flex justify-center flex-col items-center gap-12"
+          class="w-[50%] max-xl:w-[55%] max-lg:w-[100%] flex justify-center flex-col items-center gap-12 max-lg:pt-16"
         >
           <p
-            class="font-bold text-5xl max-lg:text-[4xl] max-md:text-3xl uppercase leading-14 text-transparent bg-clip-text bg-gradient-to-b from-white to-[#9E9B9B] flex text-center"
+            class="font-bold text-5xl uppercase leading-14 text-transparent bg-clip-text bg-gradient-to-b from-white to-[#9E9B9B] flex text-center max-lg:text-[32px] max-lg:leading-10 "
           >
             Why HoopsToCollege
           </p>
           <div>
             <span
-              class="border-grad rounded-2xl shadow-[0px_0px_250px_20px_rgba(203,203,203,0.1)] transform scale-115"
+              class="border-grad rounded-2xl shadow-[0px_0px_250px_20px_rgba(203,203,203,0.1)] transform scale-115 max-lg:scale-100"
             >
               <Image
                 src={"https://res.cloudinary.com/dt3zbndrl/image/upload/v1740753128/about-finder_ccfmcd.jpg"}
@@ -29,27 +29,30 @@ import { Image } from "astro:assets";
               />
             </span>
           </div>
-          <p class="text-[20px] text-white font-normal mt-2.5 text-center">
+          <p class="text-[20px] text-white font-normal mt-2.5 text-center max-lg:text-[14px] max-lg:leading-5">
             I’ve been through every angle of college basketball—from securing
             offers to facing setbacks. That’s why I built HoopsToCollege: to
             guide athletes like you to success without the guesswork.
           </p>
-          <span class="border-grad rounded-[8px]">
-            <button onclick="window.location.href='/#recruiting-plans'"
-              class="animate-pulse text-white h-[56px] rounded-[8px] font-semibold p-[8px] bg-gradient-to-r from-[#E65E10] to-[#FF9355] flex items-center justify-center gap-2 max-md:h-[46px] max-md:w-full cursor-pointer"
-            >
-              <span class="pt-[7px] pl-6 pr-6"
-                >Find My Best College Fit—Start Now</span
+          <div class="max-lg:w-full  max-lg:!pb-16">
+            <span class="border-grad rounded-[8px] max-lg:!w-[100%]">
+              <button onclick="window.location.href='/#recruiting-plans'"
+                class="animate-pulse text-white h-[56px] rounded-[8px] font-semibold p-[8px] bg-gradient-to-r from-[#E65E10] to-[#FF9355] flex items-center justify-center gap-2 cursor-pointer max-lg:text-[14px] max-lg:font-semibold max-lg:leading-[18px] max-lg:!w-full" 
               >
-            </button>
-          </span>
+                <span class="pt-[7px] pl-6 pr-6"
+                  >Find My Best College Fit—Start Now</span
+                >
+              </button>
+            </span>
+          </div>
+         
         </div>
       </div>
     </div>
   </div>
-  <div class="w-full bg-black flex justify-center items-center">
+  <div class="w-full bg-black flex justify-center relative top-[-3px] items-center max-lg:relative max-lg:top-[-3px]">
     <p
-      class="w-[50%] max-lg:w-[60%] max-md:w-[80%] font-semibold text-[32px] text-center text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400 pt-[100px] pb-[100px]"
+      class="w-[50%] max-lg:w-full  font-semibold text-[32px] max-lg:text-[16px] max-lg:leading-[22px] text-center text-transparent bg-clip-text bg-gradient-to-b from-white to-[#9E9B9B] pt-[100px] pb-[100px] max-lg:py-7 "
     >
       The small investment you make today could unlock scholarships, NIL
       opportunities, and drastically reduce college costs—opportunities worth
