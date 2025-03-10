@@ -86,6 +86,9 @@
 .hero-gradient {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 35.56%, #000000ec 100%);
 }
+.about-hero-gradient {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.096) 35.56%, #000000fa 100%);
+}
 
 @media (max-width: 1200px)  {
   .splide__arrow--next {
@@ -122,4 +125,7 @@
  body{
   background-color: #000000;
   overflow-x: hidden;
+  box-sizing: border-box;
+  margin: 0px;
+  padding:0px;
  }
