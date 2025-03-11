@@ -1,15 +1,15 @@
 ---
 import { Image } from "astro:assets";
-import player from "../../../public/assets/player.svg";
+import brandLogo from "../../../public/assets/header-logo.svg";
 ---
 
 <div class="w-full overflow-hidden flex justify-center items-center pt-3.5" id="download-now">
   <span class="border-grad rounded-2xl !w-[95%]"  >
   <div
-    class="gap-[24px] pt-[1.25%] pr-[1.5625%] pb-[1.25%] pl-[1.5625%] max-lg:p-0 rounded-2xl flex justify-between items-center max-lg:flex-col overflow-hidden"
+    class="gap-[24px] px-8 py-12 max-lg:p-3 rounded-2xl flex justify-between items-center max-lg:flex-col overflow-hidden"
     style="background: linear-gradient(98.18deg, #963400 1.03%, #000000 100.39%);"
   >
-    <div class="w-[50%] flex flex-col gap-6 max-lg:w-[90%] ml-10 max-lg:m-0 max-lg:pt-6">
+    <div class="w-[50%] flex flex-col gap-6 max-lg:w-[90%] ml-10 max-lg:m-0 max-lg:pt-6 ">
       <p class="font-bold text-[48px] leading-[60px] tracking-[0%] max-lg:text-[24px] bg-gradient-to-b bg-clip from-white to-[#9E9B9B] text-transparent bg-clip-text max-lg:leading-[28px] uppercase  ">
         FREE Recruiting Guide – Learn How to Get Noticed by College Coaches
       </p>
@@ -32,7 +32,7 @@ import player from "../../../public/assets/player.svg";
     </div>
     </div>
     <div class="w-[50%] max-lg:w-full flex  mr-10 max-lg:m-0">
-        <Image src={player} format="svg" alt={"logo"}   class="w-[100%] h-[100%] transform scale-120 mb-[2%]" />
+        <Image src={brandLogo} format="svg" alt={"logo"}   class="w-[100%] h-[100%] transform scale-75 mb-[2%]" />
       </div>
     </div>
   </div>
