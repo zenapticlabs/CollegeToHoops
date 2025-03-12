@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Home/Header.astro";
 import HeroSection from "../../components/Questionnaire/HeroSection.astro";
-import FreeRecruitingGuide from "../../components/Home/FreeRecruitingGuide.astro";
+import FreeRecruitingGuide from "../../components/Home/FreeRecruitingGuide";
 ---
 
 <Layout>
@@ -41,7 +41,7 @@ import FreeRecruitingGuide from "../../components/Home/FreeRecruitingGuide.astro
     <div class="bg-black">
       <div class="bg-[url('/assets/bg-main.png')] bg-center bg-cover">
         <div class="bg-[#000000f3]">
-          <FreeRecruitingGuide />
+          <FreeRecruitingGuide client:load />
         </div>
       </div>
     </div>

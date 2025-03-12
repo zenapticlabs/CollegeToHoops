@@ -5,7 +5,7 @@ import Header from "../../components/Home/Header.astro";
 import HeroSection from "../../components/About/HeroSection.astro";
 import FounderMessage from "../../components/About/FounderMessage.astro";
 import CollegeFitFinder from "../../components/About/CollegeFitFinder.astro";
-import FreeRecruitingGuide from "../../components/Home/FreeRecruitingGuide.astro"
+import FreeRecruitingGuide from "../../components/Home/FreeRecruitingGuide"
 ---
 <Layout>
 
@@ -35,7 +35,7 @@ import FreeRecruitingGuide from "../../components/Home/FreeRecruitingGuide.astro
             <div class="bg-[#000000f3]">
               <FounderMessage />
               <CollegeFitFinder />
-              <FreeRecruitingGuide />
+              <FreeRecruitingGuide client:load />
             </div>
           </div>
         </div>

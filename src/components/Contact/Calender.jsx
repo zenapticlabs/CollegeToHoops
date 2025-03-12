@@ -11,7 +11,7 @@ const Calendar = () => {
           backgroundColor: "#fff",
         }}
         styles={{
-          height: "700px",
+          height: "1100px",
           width: "100vw",
           padding: "0px",
         }}

@@ -101,7 +101,11 @@ const Testimonials = () => {
               focus: "center",
               pagination: false,
               breakpoints: {
-                1024: {
+                1024:{
+                  perPage: 2.5,
+                  perMove:2.5
+                },
+                786: {
                   perPage: 1.1,
                   perMove:2
                 },
