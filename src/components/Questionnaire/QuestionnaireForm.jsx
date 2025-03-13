@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 const Token = import.meta.env.PUBLIC_ACCESS_TOKEN;
 
 function QuestionnaireForm() {
+    const [toastMessage, setToastMessage] = useState("")
+    const [toastStatus, setToastStatus] = useState("")
     const [questionnaireData, setQuestionnaireData] = useState({
         fullName: '',
         age: '',
@@ -26,45 +28,88 @@ function QuestionnaireForm() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const updatedQuestionnaireData = {
-            ...questionnaireData,
-            QUESTIONNAIRE_FILLED: true
-        };
+        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        if (!emailRegex.test(questionnaireData.email)) {
+            setToastMessage("Please enter a valid email address.");
+            setToastStatus("failed");
+            document.getElementById("toast").style.display = "flex";
+            document.getElementById('header').scrollIntoView({ behavior: 'smooth' })
 
-        fetch(`https://hook.us2.make.com/${Token}`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(updatedQuestionnaireData),
-        })
-        .then((response) => {
-            console.log(response);
-            if (response.ok) {
-                setQuestionnaireData({
-                    fullName: '',
-                    age: '',
-                    email: '',
-                    height: '',
-                    weight: '',
-                    current_school: '',
-                    graduation_year: '',
-                    basketball_profile: '',
-                    college_program: ''
-                });
-            } else {
-                console.error('Failed to submit form');
-            }
-        })
-        .catch((error) => {
-            console.error('Error:', error.message);
-        });
+        }
+        else{
+            const updatedQuestionnaireData = {
+                ...questionnaireData,
+                QUESTIONNAIRE_FILLED: true
+            };
+    
+            fetch(`https://hook.us2.make.com/${Token}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(updatedQuestionnaireData),
+            })
+            .then((response) => {
+                document.getElementById("toast").style.display = "flex";
+                if (response.ok) {
+                    setToastMessage("Thank you! Your details have been received!");
+                    setToastStatus("success");
+                    setQuestionnaireData({
+                        fullName: '',
+                        age: '',
+                        email: '',
+                        height: '',
+                        weight: '',
+                        current_school: '',
+                        graduation_year: '',
+                        basketball_profile: '',
+                        college_program: ''
+                    });
+                } else {
+                    console.error('Failed to submit form');
+                    setToastMessage("We encountered an issue while submitting your details. Please try again.");
+                    setToastStatus("failed");
+                }
+                document.getElementById('header').scrollIntoView({ behavior: 'smooth' })
+
+            })
+            .catch((error) => {
+                console.error('Error:', error.message);
+            });
+        }       
     };
 
+    const hideToast = () => {
+        document.getElementById("toast").style.display = "none";
+    };
+const scrollIntoView=()=>{
+}
     return (
         <>
-            <form className="w-[60%] max-lg:w-full max-lg:flex max-lg:justify-center max-lg:items" onSubmit={handleSubmit}>
-                <div className="flex flex-wrap mb-6 max-lg:w-[95%]">
+            <form className="w-[60%] max-lg:w-full max-lg:flex max-lg:justify-center max-lg:items relative" >
+                <div id="toast" className="hidden items-center min-h-[50px] absolute w-[96%] max-lg:w-[95%] top-[-66px] mx-[2%] h-8 p-4 mb-4  text-gray-500 bg-white rounded-lg shadow-sm dark:text-gray-400 dark:bg-gray-800" role="alert">
+                    {toastStatus === "success" && <div className="inline-flex items-center justify-center shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
+                        <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                        </svg>
+                        <span className="sr-only">Check icon</span>
+                    </div>}
+                    {toastStatus === "failed" && <div className="inline-flex items-center justify-center shrink-0 w-8 h-8 text-red-500 bg-red-100 rounded-lg dark:bg-red-800 dark:text-red-200">
+                        <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 11.793a1 1 0 1 1-1.414 1.414L10 11.414l-2.293 2.293a1 1 0 0 1-1.414-1.414L8.586 10 6.293 7.707a1 1 0 0 1 1.414-1.414L10 8.586l2.293-2.293a1 1 0 0 1 1.414 1.414L11.414 10l2.293 2.293Z"/>
+                        </svg>
+                        <span className="sr-only">Error icon</span>
+                    </div>}
+
+                    <div className="ms-3 text-[18px] max-lg:text-[14px] font-semibold pt-[7px] " id='toast'>{toastMessage}</div>
+                    <button type="button" className="ms-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex items-center justify-center h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700" data-dismiss-target="#toast-success" aria-label="Close" onClick={hideToast}>
+                        <span className="sr-only">Close</span>
+                        <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                        </svg>
+                    </button>
+                </div>
+                <div className="flex flex-wrap mb-6 max-lg:w-full">
                     <div className="w-[50%] px-3 mb-7 max-lg:mb-2">
                         <label className="block tracking-wide text-[#FFFFFF] text-[14px] font-normal leading-5" htmlFor="fullName">
                             Full Name <span className="text-red-500">*</span>
@@ -193,7 +238,7 @@ function QuestionnaireForm() {
                         <span className="border-grad rounded-[8px] max-lg:!w-[100%]">
                             <button
                                 className="bg-orange-500 text-[#FFFFFF] font-semibold py-2 px-4 text-[20px] leading-6 rounded-[8px] max-lg:!w-[100%] h-[56px] pt-[14px]"
-                                type="submit"
+                             onClick={handleSubmit}
                             >
                                 Submit
                             </button>

@@ -4,7 +4,7 @@ import headerLogo from "../../../public/assets/header-logo.svg";
 import list from "../../../public/assets/list.svg"
 ---
 
-<header
+<header id="header"
   class="flex items-center justify-between px-[24px] py-[12px] w-full text-[#FFFFFF] h-[80px]"
 >
   <div class="flex items-center gap-6 max-lg:hidden">
@@ -37,7 +37,7 @@ import list from "../../../public/assets/list.svg"
       <a href="/questionnaire" class="font-semibold block text-[16px] text-white rounded-[8px] pt-4 pb-3.5 w-full text-center" id="questionnaire">Questionnaire</a>
     </div>
     
-    <div class="flex  items-center flex-col justify-center justify-items-center gap-6 w-full">
+    <div class="flex  items-center flex-col justify-center justify-items-center gap-6 w-full pb-[9vh]">
       <a href="/contact" class="font-semibold block text-[16px] text-white rounded-[8px] pt-4 pb-3.5 w-full text-center" id="contact">Contact</a>
       <span class="border-grad rounded-[8px]">
       <button class="font-semibold block text-[16px] bg-black !w-[50vw] text-white rounded-[8px] !pt-4 !pb-3.5   text-center " onclick="document.getElementById('download-now').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto'; document.getElementById('icon').src='/assets/list.svg'">Get Started</button>

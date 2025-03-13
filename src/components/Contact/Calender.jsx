@@ -13,7 +13,7 @@ const Calendar = () => {
         styles={{
           height: "1100px",
           width: "100vw",
-          padding: "0px",
+          paddingBottom: "40px",
         }}
       />
     </>
