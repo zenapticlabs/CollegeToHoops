@@ -5,13 +5,17 @@ import check from "../../../public/assets/check.svg";
 import plan_rocket from "../../../public/assets/plan-rocket.svg";
 import seal_check from "../../../public/assets/seal-check.svg";
 import sparkle from "../../../public/assets/sparkle.svg";
+const essentialGamePlan = import.meta.env.ESSENTIAL_GAME_PLAN;
+const guidedRecruitingRoadMap= import.meta.env.GUIDED_RECRUITING_ROADMAP_PlAN;
+const eliteSpotlite= import.meta.env.ELITE_SPOTLINE_PLAN;
+const allInOnePremium=import.meta.env.ALL_IN_ONE_PRO_ADVANTAGE_PLAN;
 const subscriptionPlans = [
   {
     plan: {
       icon: star,
       planName: "Essential Game Plan",
-      link: "https://buy.stripe.com/test_6oE6qJdMHatq1P29AB",
-      price: "$90",
+      link: essentialGamePlan,
+      price: "$99",
       description:
         "Your First Step Toward College Basketball – Build Your Foundation & Get Noticed!",
       services: [
@@ -42,7 +46,7 @@ const subscriptionPlans = [
     plan: {
       icon: plan_rocket,
       planName: "Guided Recruiting Roadmap",
-      link:"https://buy.stripe.com/test_6oE6qJdMHatq1P29AB",
+      link:guidedRecruitingRoadMap,
       price: "$299",
       description:
         "Take Control of Your Recruiting Journey – Get a Personalized Plan Built for Success!",
@@ -77,7 +81,7 @@ const subscriptionPlans = [
     plan: {
       icon: sparkle,
       planName: "Elite Spotlight ",
-      link:"https://buy.stripe.com/test_bIYbL3bEz7he1P2dQT",
+      link:eliteSpotlite,
       price: "$799",
       description:
         "Be Seen by Coaches – Professional Highlight Reels & Direct Outreach Done for You!",
@@ -109,7 +113,7 @@ const subscriptionPlans = [
     plan: {
       icon: seal_check,
       planName: "All-In Pro Advantage",
-      link:"https://buy.stripe.com/test_aEU5mF5gbcBy79m004",
+      link:allInOnePremium,
       price: "$3000",
       description:
         "The VIP Treatment – Get a Fully Managed Recruiting Plan & Secure Your Scholarship!",
@@ -224,7 +228,7 @@ const subscriptionPlans = [
     </p>
     <span class="border-grad rounded-[8px]">
       <button
-        onclick="document.getElementById('recruiting-plans').scrollIntoView({ behavior: 'smooth' })"
+        onclick="window.location.href='/questionnaire'"
         class="animate-pulse w-[383px] h-[56px] pb-0 rounded-[8px] p-[8px] bg-gradient-to-r from-[#E65E10] to-[#FF9355] text-center gap-2 max-md:h-[46px] max-md:w-[90vw] max-lg:text-[20px] max-lg:font-semibold text-white"
       >
         Secure My Spot—Let’s Talk.
@@ -233,7 +237,7 @@ const subscriptionPlans = [
   </div>
 </div>
 
-<script>
+<script defer>
 const options = {
   root: null, // Use the viewport as the root
   threshold: 1, // Trigger when 100% of the element is visible

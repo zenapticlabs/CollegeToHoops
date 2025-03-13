@@ -1,16 +1,17 @@
 import React from "react";
 import { InlineWidget } from "react-calendly";
+const calendlyURL = import.meta.env.CALENDLY_URL;
+
 const Calendar = () => {
-  const calendlyUrl = 'https://calendly.com/zenaptic-labs/30min'; // will replace with env variable later
   return (
     <>
       <InlineWidget
-        url={calendlyUrl}
+        url={calendlyURL}
         pageSettings={{
           backgroundColor: "#fff",
         }}
         styles={{
-          height: "700px",
+          height: "1100px",
           width: "100vw",
           padding: "0px",
         }}

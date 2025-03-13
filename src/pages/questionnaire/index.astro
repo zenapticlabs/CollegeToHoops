@@ -3,12 +3,12 @@ import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Home/Header.astro";
 import HeroSection from "../../components/Questionnaire/HeroSection.astro";
-import FreeRecruitingGuide from "../../components/Home/FreeRecruitingGuide.astro";
+import FreeRecruitingGuide from "../../components/Home/FreeRecruitingGuide";
 ---
 
 <Layout>
   <div class="w-full">
-    <div class="w-full h-[848px] overflow-hidden relative max-lg:h-[530px]">
+    <div class="w-full h-[1050px] overflow-hidden relative max-lg:h-[950px] max-md:h-[1050px]">
       <div
         class="h-full w-full relative
       after:content-[url('/assets/scratchy-overlay.jpeg')]
@@ -26,13 +26,13 @@ import FreeRecruitingGuide from "../../components/Home/FreeRecruitingGuide.astro
               width={100} 
               height={100}
               alt={""}              
-              class="w-[38%] h-full  mix-blend-luminosity absolute left-[20%] bottom-[-7%] object-cover z-[15] ml-[48px] mb-[16px]"
+              class="w-[38%] h-full  mix-blend-luminosity absolute left-[20%] bottom-[-7%] object-cover z-[15] ml-[48px] mb-[16px] max-lg:hidden"
             />
           </div>
         </div>
       </div>
 
-      <div class="absolute top-0 left-0 w-full h-full hero-gradient z-20">
+      <div class="absolute top-0 left-0 w-full h-full max-lg:questionnaire-hero-gradient hero-gradient z-20">
         <Header />
         <HeroSection />
       </div>
@@ -41,7 +41,7 @@ import FreeRecruitingGuide from "../../components/Home/FreeRecruitingGuide.astro
     <div class="bg-black">
       <div class="bg-[url('/assets/bg-main.png')] bg-center bg-cover">
         <div class="bg-[#000000f3]">
-          <FreeRecruitingGuide />
+          <FreeRecruitingGuide client:load />
         </div>
       </div>
     </div>
