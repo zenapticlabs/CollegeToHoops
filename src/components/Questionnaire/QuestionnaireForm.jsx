@@ -6,7 +6,7 @@ function QuestionnaireForm() {
     const [toastMessage, setToastMessage] = useState("")
     const [toastStatus, setToastStatus] = useState("")
     const [questionnaireData, setQuestionnaireData] = useState({
-        fullName: '',
+        name: '',
         age: '',
         email: '',
         height: '',
@@ -55,7 +55,7 @@ function QuestionnaireForm() {
                     setToastMessage("Thank you! Your details have been received!");
                     setToastStatus("success");
                     setQuestionnaireData({
-                        fullName: '',
+                        name: '',
                         age: '',
                         email: '',
                         height: '',
@@ -82,8 +82,6 @@ function QuestionnaireForm() {
     const hideToast = () => {
         document.getElementById("toast").style.display = "none";
     };
-const scrollIntoView=()=>{
-}
     return (
         <>
             <form className="w-[60%] max-lg:w-full max-lg:flex max-lg:justify-center max-lg:items relative" >
@@ -111,16 +109,16 @@ const scrollIntoView=()=>{
                 </div>
                 <div className="flex flex-wrap mb-6 max-lg:w-full">
                     <div className="w-[50%] px-3 mb-7 max-lg:mb-2">
-                        <label className="block tracking-wide text-[#FFFFFF] text-[14px] font-normal leading-5" htmlFor="fullName">
+                        <label className="block tracking-wide text-[#FFFFFF] text-[14px] font-normal leading-5" htmlFor="name">
                             Full Name <span className="text-red-500">*</span>
                         </label>
                         <input
                             onChange={handleChange}
                             className="h-[48px] pt-4 block w-full bg-[#FFFFFF] text-[14px] font-normal text-gray-700 border border-[#E6E6E7] rounded py-3 px-4 mb-3 focus:outline-none focus:bg-white"
-                            id="fullName"
+                            id="name"
                             type="text"
                             placeholder="Enter your full name"
-                            value={questionnaireData.fullName}
+                            value={questionnaireData.name}
                         />
                     </div>
 
