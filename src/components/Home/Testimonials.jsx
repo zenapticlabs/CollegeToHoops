@@ -32,30 +32,17 @@ const testimonials = [
   },
   {
     video_url:
-      "https://res.cloudinary.com/dt3zbndrl/video/upload/v1740755154/testimonial_4_f08uaa.mp4",
+      "https://res.cloudinary.com/dt3zbndrl/video/upload/v1741669216/testimonial_6_muj1ry.mp4",
     description:
       " HoopstoCollege program changed my recruiting journey—now I have real offers on the table!",
     nameOFInfluecer: "Roberto G.",
   },
   {
     video_url:
-      "https://res.cloudinary.com/dt3zbndrl/video/upload/v1740755157/testimonial_3_bttfh3.mp4",
+      "https://res.cloudinary.com/dt3zbndrl/video/upload/v1741669215/testimonial_5_n5o8oh.mp4",
     description:
       "We had no idea where to start—now my son has real opportunities!",
     nameOFInfluecer: "Adam K.",
-  },
-  {
-    video_url:
-      "https://res.cloudinary.com/dt3zbndrl/video/upload/v1740755152/testimonial_2_euyowc.mp4",
-    description:
-      "Watching my son gain confidence and secure a scholarship was priceless. Thank you!",
-    nameOFInfluecer: "Lily M.",
-  },
-  {
-    video_url:
-      "https://res.cloudinary.com/dt3zbndrl/video/upload/v1740755155/testimonial_1_ocrszl.mp4",
-    description: " From unknown to unstoppable—this process works.",
-    nameOFInfluecer: "Harry Jr.",
   },
 ];
 
