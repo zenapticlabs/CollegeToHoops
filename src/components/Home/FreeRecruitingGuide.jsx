@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-const Token = import.meta.env.PUBLIC_ACCESS_TOKEN
+const Token = import.meta.env.WEBHOOOK_TOKEN
 const FreeRecruitingGuide = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
