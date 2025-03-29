@@ -1,46 +1,95 @@
 ---
 import { Image } from "astro:assets";
 import headerLogo from "../../../public/assets/header-logo.svg";
-import list from "../../../public/assets/list.svg"
+import list from "../../../public/assets/list.svg";
 ---
 
-<header id="header"
+<header
+  id="header"
   class="flex items-center justify-between px-[24px] py-[12px] w-full text-[#FFFFFF] h-[80px]"
 >
   <div class="flex items-center gap-6 max-lg:hidden">
-      <a class="font-semibold text-[16px] leading-[21.6px] nav-link " id="about" href="/about">About Myles</a>
-    <a href="/questionnaire" class="font-semibold text-[16px] leading-[21.6px] nav-link " id="questionnaire"  >Questionnaire</a>
+    <a
+      class="font-semibold text-[16px] leading-[21.6px] nav-link"
+      id="about"
+      href="/about">About Myles</a
+    >
+    <a
+      href="/questionnaire"
+      class="font-semibold text-[16px] leading-[21.6px] nav-link"
+      id="questionnaire">Questionnaire</a
+    >
   </div>
-    <a href="/" class="block w-[178px] h-[64px] p-2 max-lg:pl-0 max-lg:relative max-lg:right-4 "  id="home">
-      <Image src={headerLogo} format="svg" alt={"logo"} id="home-child"   />
-    </a>
-  <div class="flex items-center gap-6 ">
-    <a href="/contact" class="font-semibold text-[16px] leading-[21.6px] nav-link cursor-pointer pt-1.5 max-lg:hidden" id="contact">Contact</a>
+  <a
+    href="/"
+    class="block w-[178px] h-[64px] p-2 max-lg:pl-0 max-lg:relative max-lg:right-4"
+    id="home"
+  >
+    <Image src={headerLogo} format="svg" alt={"logo"} id="home-child" />
+  </a>
+  <div class="flex items-center gap-6">
+    <a
+      href="mailto:myles@hoopstocollege.com"
+      class="font-semibold text-[16px] leading-[21.6px] nav-link cursor-pointer pt-1.5 max-lg:hidden"
+      id="contact">Contact</a
+    >
     <span class="border-grad rounded-[8px] max-lg:!hidden">
-    <button class="font-semibold text-[16px]  bg-black  w-[129px] h-[44px] rounded-[8px]  p-[8px] pt-[11px] " onclick="document.getElementById('download-now').scrollIntoView({ behavior: 'smooth' });" >Get Started</button>
+      <a href="/contact">
+        <button
+          class="font-semibold text-[16px] bg-black w-[129px] h-[44px] rounded-[8px] p-[8px] pt-[11px]"
+          >Get Started</button
+        >
+      </a>
     </span>
 
     <span id="nav-bar" class="hidden max-lg:block">
-      <Image src={list} format="svg" loading="lazy" alt={"menu"}  class="w-[24px] " id="icon"  />
+      <Image
+        src={list}
+        format="svg"
+        loading="lazy"
+        alt={"menu"}
+        class="w-[24px]"
+        id="icon"
+      />
     </span>
   </div>
 </header>
 <div
-  class="fixed w-[100vw] right-0 top-20 overflow-hidden hidden z-100 px-[20px] py-[24px] bg-[#00000028] max-md:w-[65%] "
+  class="fixed w-[100vw] right-0 top-20 overflow-hidden hidden z-100 px-[20px] py-[24px] bg-[#00000028] max-md:w-[65%]"
   id="menu"
   style="height:calc(100vh - 66px)"
 >
   <div class="absolute inset-0 bg-transparent backdrop-blur-xl z-0"></div>
-  <div class="relative w-full h-full flex flex-col justify-between items-between z-10">
+  <div
+    class="relative w-full h-full flex flex-col justify-between items-between z-10"
+  >
     <div class="flex items-center flex-col justify-center gap-6 w-full">
-      <a class="font-semibold block text-[16px] text-white rounded-[8px] bg-black pt-4 pb-3.5 w-full text-center" id="about" href="/about">About Myles</a>
-      <a href="/questionnaire" class="font-semibold block text-[16px] text-white rounded-[8px] pt-4 pb-3.5 w-full text-center" id="questionnaire">Questionnaire</a>
+      <a
+        class="font-semibold block text-[16px] text-white rounded-[8px] bg-black pt-4 pb-3.5 w-full text-center"
+        id="about"
+        href="/about">About Myles</a
+      >
+      <a
+        href="/questionnaire"
+        class="font-semibold block text-[16px] text-white rounded-[8px] pt-4 pb-3.5 w-full text-center"
+        id="questionnaire">Questionnaire</a
+      >
     </div>
-    <div class="flex  items-center flex-col justify-center justify-items-center gap-6 w-full pb-[6vh]">
-      <a href="/contact" class="font-semibold block text-[16px] text-white rounded-[8px] pt-4 pb-3.5 w-full text-center" id="contact">Contact</a>
+    <div
+      class="flex items-center flex-col justify-center justify-items-center gap-6 w-full pb-[6vh]"
+    >
+      <a
+        href="/contact"
+        class="font-semibold block text-[16px] text-white rounded-[8px] pt-4 pb-3.5 w-full text-center"
+        id="contact">Contact</a
+      >
       <span class="border-grad rounded-[8px]">
-      <button class="font-semibold block text-[16px] bg-black !w-[50vw] text-white rounded-[8px] !pt-4 !pb-3.5   text-center " onclick="document.getElementById('download-now').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto'; document.getElementById('icon').src='/assets/list.svg'">Get Started</button>
-    </span>
+        <button
+          class="font-semibold block text-[16px] bg-black !w-[50vw] text-white rounded-[8px] !pt-4 !pb-3.5 text-center"
+          onclick="document.getElementById('download-now').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto'; document.getElementById('icon').src='/assets/list.svg'"
+          >Get Started</button
+        >
+      </span>
     </div>
   </div>
 </div>
@@ -49,9 +98,9 @@ import list from "../../../public/assets/list.svg"
   const path = window.location.pathname;
   const navLinks = {
     "/about": "about",
-    "/questionnaire":"questionnaire" ,
+    "/questionnaire": "questionnaire",
     "/": "home",
-    "/contact" :"contact"
+    "/contact": "contact",
   };
 
   const activeLinkId = navLinks[path as keyof typeof navLinks];
@@ -82,6 +131,4 @@ import list from "../../../public/assets/list.svg"
       }
     }
   });
-
- 
 </script>
