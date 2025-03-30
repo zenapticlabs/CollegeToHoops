@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Token = import.meta.env.WEBHOOK_TOKEN;
+const Token = import.meta.env.PUBLIC_WEBHOOK_TOKEN;
 
 function QuestionnaireForm() {
     const [toastMessage, setToastMessage] = useState("")
