@@ -1,18 +1,22 @@
 import React, { useState } from 'react';
 
-const Token = import.meta.env.PUBLIC_WEBHOOK_TOKEN;
+// const Token = import.meta.env.PUBLIC_WEBHOOK_TOKEN;
+const Token = "b3ie1u8i12jhbqbn7y88g7hodt2yq1vt"
+
 
 function QuestionnaireForm() {
     const [toastMessage, setToastMessage] = useState("")
     const [toastStatus, setToastStatus] = useState("")
     const [questionnaireData, setQuestionnaireData] = useState({
         name: '',
-        age: '',
+        age: null,
         email: '',
-        height: '',
-        weight: '',
+        height: null,
+        weight: null,
+        position: '',
+        dob: '',
         current_school: '',
-        graduation_year: '',
+        graduation_year: null,
         basketball_profile: '',
         college_program: ''
     });
@@ -108,7 +112,7 @@ function QuestionnaireForm() {
                     </button>
                 </div>
                 <div className="flex flex-wrap mb-6 max-lg:w-full">
-                    <div className="w-[50%] px-3 mb-7 max-lg:mb-2">
+                    <div className="w-[50%] px-3 max-lg:mb-2">
                         <label className="block tracking-wide text-[#FFFFFF] text-[14px] font-normal leading-5" htmlFor="name">
                             Full Name <span className="text-red-500">*</span>
                         </label>
@@ -122,7 +126,7 @@ function QuestionnaireForm() {
                         />
                     </div>
 
-                    <div className="w-[50%] px-3 mb-7 max-lg:mb-2">
+                    <div className="w-[50%] px-3 max-lg:mb-2">
                         <label className="block tracking-wide text-[#FFFFFF] text-[14px] font-normal leading-5" htmlFor="age">
                             Age <span className="text-red-500">*</span>
                         </label>
@@ -136,7 +140,7 @@ function QuestionnaireForm() {
                         />
                     </div>
 
-                    <div className="w-full px-3 mb-7 max-lg:mb-2">
+                    <div className="w-full px-3 max-lg:mb-2">
                         <label className="block tracking-wide text-[#FFFFFF] text-[14px] font-normal leading-5" htmlFor="email">
                             Email <span className="text-red-500">*</span>
                         </label>
@@ -150,7 +154,7 @@ function QuestionnaireForm() {
                         />
                     </div>
 
-                    <div className="w-[50%] px-3 mb-7 max-lg:mb-2">
+                    <div className="w-[50%] px-3 max-lg:mb-2">
                         <label className="block tracking-wide text-[#FFFFFF] text-[14px] font-normal leading-5" htmlFor="height">
                             Height <span className="text-red-500">*</span>
                         </label>
@@ -158,13 +162,14 @@ function QuestionnaireForm() {
                             onChange={handleChange}
                             className="h-[48px] pt-4 block w-full bg-[#FFFFFF] text-[14px] font-normal text-gray-700 border border-[#E6E6E7] rounded py-3 px-4 mb-3 focus:outline-none focus:bg-white"
                             id="height"
-                            type="text"
-                            placeholder="ft"
+                            type="number"
+                            step="0.1"
+                            placeholder="Ft.In (5.11)"
                             value={questionnaireData.height}
                         />
                     </div>
 
-                    <div className="w-[50%] px-3 mb-7 max-lg:mb-2">
+                    <div className="w-[50%] px-3 max-lg:mb-2">
                         <label className="block tracking-wide text-[#FFFFFF] text-[14px] font-normal leading-5" htmlFor="weight">
                             Weight <span className="text-red-500">*</span>
                         </label>
@@ -173,12 +178,40 @@ function QuestionnaireForm() {
                             className="h-[48px] pt-4 block w-full bg-[#FFFFFF] text-[14px] font-normal text-gray-700 border border-[#E6E6E7] rounded py-3 px-4 mb-3 focus:outline-none focus:bg-white"
                             id="weight"
                             type="number"
+                            step="1"
                             placeholder="lb"
                             value={questionnaireData.weight}
                         />
                     </div>
+                    <div className="w-[50%] px-3 max-lg:mb-2">
+                        <label className="block tracking-wide text-[#FFFFFF] text-[14px] font-normal leading-5" htmlFor="weight">
+                            Date of Birth <span className="text-red-500">*</span>
+                        </label>
+                        <input
+                            onChange={handleChange}
+                            className="h-[48px] pt-4 block w-full bg-[#FFFFFF] text-[14px] font-normal text-gray-700 border border-[#E6E6E7] rounded py-3 px-4 mb-3 focus:outline-none focus:bg-white"
+                            id="dob"
+                            type="date"
+                            placeholder="Date of Birth"
+                            value={questionnaireData.dob}
+                        />
+                    </div>
 
-                    <div className="w-[50%] px-3 mb-7 max-lg:mb-2">
+                    <div className="w-[50%] px-3 max-lg:mb-2">
+                        <label className="block tracking-wide text-[#FFFFFF] text-[14px] font-normal leading-5" htmlFor="weight">
+                            Position <span className="text-red-500">*</span>
+                        </label>
+                        <input
+                            onChange={handleChange}
+                            className="h-[48px] pt-4 block w-full bg-[#FFFFFF] text-[14px] font-normal text-gray-700 border border-[#E6E6E7] rounded py-3 px-4 mb-3 focus:outline-none focus:bg-white"
+                            id="position"
+                            type="text"
+                            placeholder="Position"
+                            value={questionnaireData.position}
+                        />
+                    </div>
+
+                    <div className="w-[50%] px-3 max-lg:mb-2">
                         <label className="block tracking-wide text-[#FFFFFF] text-[14px] font-normal leading-5" htmlFor="current_school">
                             Current School <span className="text-red-500">*</span>
                         </label>
@@ -192,7 +225,7 @@ function QuestionnaireForm() {
                         />
                     </div>
 
-                    <div className="w-[50%] px-3 mb-7 max-lg:mb-2">
+                    <div className="w-[50%] px-3 max-lg:mb-2">
                         <label className="block tracking-wide text-[#FFFFFF] text-[14px] font-normal leading-5" htmlFor="graduation_year">
                             Graduation Year <span className="text-red-500">*</span>
                         </label>
@@ -200,32 +233,32 @@ function QuestionnaireForm() {
                             onChange={handleChange}
                             className="h-[48px] pt-4 block w-full bg-[#FFFFFF] text-[14px] font-normal text-gray-700 border border-[#E6E6E7] rounded py-3 px-4 mb-3 focus:outline-none focus:bg-white"
                             id="graduation_year"
-                            type="text"
-                            placeholder="Select a year"
+                            type="number"
+                            placeholder="Enter your graduation year"
                             value={questionnaireData.graduation_year}
                         />
                     </div>
 
-                    <div className="w-full px-3 mb-7 max-lg:mb-2">
+                    <div className="w-full px-3 max-lg:mb-2">
                         <label className="block text-[#FFFFFF] text-[14px] font-normal leading-5" htmlFor="basketball_profile">
                             Describe your basketball profile <span className="text-red-500">*</span>
                         </label>
                         <textarea
                             onChange={handleChange}
-                            className="h-[48px] pt-4 block w-full bg-[#FFFFFF] text-[14px] font-normal text-gray-700 border border-[#E6E6E7] rounded py-3 px-4 mb-3 focus:outline-none focus:bg-white"
+                            className="h-[72px] pt-4 block w-full bg-[#FFFFFF] text-[14px] font-normal text-gray-700 border border-[#E6E6E7] rounded py-3 px-4 mb-3 focus:outline-none focus:bg-white"
                             id="basketball_profile"
                             placeholder="Current Position, Skill Level (Varsity, AAU, Club, etc.)"
                             value={questionnaireData.basketball_profile}
                         ></textarea>
                     </div>
 
-                    <div className="w-full px-3 mb-7 max-lg:mb-2">
+                    <div className="w-full px-3 max-lg:mb-2">
                         <label className="block text-[#FFFFFF] text-[14px] font-normal leading-5" htmlFor="college_program">
                             What Are You Looking for in a College Program? <span className="text-red-500">*</span>
                         </label>
                         <textarea
                             onChange={handleChange}
-                            className="h-[48px] pt-4 block w-full bg-[#FFFFFF] text-[14px] font-normal text-gray-700 border border-[#E6E6E7] rounded py-3 px-4 mb-3 focus:outline-none focus:bg-white"
+                            className="h-[72px] pt-4 block w-full bg-[#FFFFFF] text-[14px] font-normal text-gray-700 border border-[#E6E6E7] rounded py-3 px-4 mb-3 focus:outline-none focus:bg-white"
                             id="college_program"
                             placeholder="Type your message"
                             value={questionnaireData.college_program}
