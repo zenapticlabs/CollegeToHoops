@@ -31,7 +31,7 @@ const FreeRecruitingGuide = () => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ email, FREE_GUIDE_RECIEVED: true }),
+      body: JSON.stringify({ email, FREE_GUIDE_RECEIVED: true }),
     });
 
     if (response.status === 200) {
