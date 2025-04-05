@@ -8,40 +8,68 @@ import tiktok from "../../../public/assets/tiktok.svg";
 ---
 
 <div>
-    <div class="w-full bg-black">
-    <Image
-    src={footer_img}
-    format="svg"
-    alt={""}    
-    class="w-full h-full"
-  />
-    </div>
-    <div class="bg-black">
-        <div class="bg-[url('/assets/bg-main.png')] bg-center bg-cover">
-            <div class="bg-[#000000ef]">
-                <div class="h-[120px] max-lg:pb-10 max-lg:h-[176px] max-lg:pt-4 flex items-center justify-between  text-white p-5 max-lg:flex-col max-lg:text-center max-lg:p-3">
-                    <span class="max-lg:mb-4 font-normal text-[20px] max-lg:text-[14px] ">
-                        @ 2025 Hoops to College. All rights reserved.
-                    </span>
+  <div class="w-full bg-black">
+    <Image src={footer_img} format="svg" alt={""} class="w-full h-full" />
+  </div>
+  <div class="bg-black">
+    <div class="bg-[url('/assets/bg-main.png')] bg-center bg-cover">
+      <div class="bg-[#000000ef]">
+        <div
+          id="footer"
+          class="h-[120px] max-lg:pb-10 max-lg:h-[176px] max-lg:pt-4 flex items-center justify-between text-white p-5 max-lg:flex-col max-lg:text-center max-lg:p-3"
+        >
+          <span class="max-lg:mb-4 font-normal text-[20px] max-lg:text-[14px]">
+            @ 2025 Hoops to College. All rights reserved.
+          </span>
 
-                    <span class="flex items-center gap-4 max-lg:justify-center max-lg:mb-4">
-                        <Image src={twitter} format="svg" alt={"logo"} class="max-lg:w-6" />
-                        <Image src={discord} format="svg" alt={"logo"} class="max-lg:w-6" />
-                        <Image src={youtube} format="svg" alt={"logo"} class="max-lg:w-6" />
-                        <Image src={tiktok} format="svg" alt={"logo"} class="max-lg:w-6" />
-                    </span>
-
-                    <span class="flex items-center text-[20px]  max-lg:text-[14px] gap-2.5  max-lg:gap-1 max-lg:justify-center ">
-                        <span class="block font-normal">
-                            Term & Conditions  
-                        </span>
-                        <span class="block pb-[7px] font-bold mx-1.5 text-gray-400 ">.</span>
-                        <span class="block font-normal">
-                            Privacy Policies
-                        </span>
-                    </span>
-                </div>
+          <div class="flex flex-col items-center gap-4 max-lg:gap-4">
+            <div class="mx-lg:text-[14px] flex flex-col items-center gap-1">
+              <span class="text-xl max-lg:text-[14px]">Reach me at</span>
+              <span class="text-xl max-lg:text-[14px]">
+                <a href="mailto:myles@hoopstocollege.com" class="underline">
+                  myles@hoopstocollege.com
+                </a>
+              </span>
             </div>
+            <span
+              class="flex items-center gap-4 max-lg:justify-center max-lg:mb-4"
+            >
+              <Image
+                src={twitter}
+                format="svg"
+                alt={"logo"}
+                class="max-lg:w-6"
+              />
+              <Image
+                src={discord}
+                format="svg"
+                alt={"logo"}
+                class="max-lg:w-6"
+              />
+              <Image
+                src={youtube}
+                format="svg"
+                alt={"logo"}
+                class="max-lg:w-6"
+              />
+              <Image
+                src={tiktok}
+                format="svg"
+                alt={"logo"}
+                class="max-lg:w-6"
+              />
+            </span>
+          </div>
+
+          <span
+            class="flex items-center text-[20px] max-lg:text-[14px] gap-2.5 max-lg:gap-1 max-lg:justify-center"
+          >
+            <span class="block font-normal"> Term & Conditions </span>
+            <span class="block pb-[7px] font-bold mx-1.5 text-gray-400">.</span>
+            <span class="block font-normal"> Privacy Policies </span>
+          </span>
         </div>
+      </div>
     </div>
+  </div>
 </div>

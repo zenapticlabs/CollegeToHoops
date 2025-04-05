@@ -28,11 +28,11 @@ import list from "../../../public/assets/list.svg";
     <Image src={headerLogo} format="svg" alt={"logo"} id="home-child" />
   </a>
   <div class="flex items-center gap-6">
-    <a
-      href="mailto:myles@hoopstocollege.com"
+    <button
+      onclick="document.getElementById('footer').scrollIntoView({ behavior: 'smooth' })"
       class="font-semibold text-[16px] leading-[21.6px] nav-link cursor-pointer pt-1.5 max-lg:hidden"
-      id="contact">Contact</a
-    >
+      >Contact
+    </button>
     <span class="border-grad rounded-[8px] max-lg:!hidden">
       <a href="/contact">
         <button
@@ -78,11 +78,12 @@ import list from "../../../public/assets/list.svg";
     <div
       class="flex items-center flex-col justify-center justify-items-center gap-6 w-full pb-[6vh]"
     >
-      <a
-        href="/contact"
+      <button
+        onclick="document.getElementById('footer').scrollIntoView({ behavior: 'smooth' })"
         class="font-semibold block text-[16px] text-white rounded-[8px] pt-4 pb-3.5 w-full text-center"
-        id="contact">Contact</a
-      >
+        id="contact"
+        >Contact
+      </button>
       <span class="border-grad rounded-[8px]">
         <button
           class="font-semibold block text-[16px] bg-black !w-[50vw] text-white rounded-[8px] !pt-4 !pb-3.5 text-center"
@@ -111,6 +112,27 @@ import list from "../../../public/assets/list.svg";
     }
   }
   document.getElementById("nav-bar")?.addEventListener("click", () => {
+    const icon = document.getElementById("icon");
+    if (icon && icon instanceof HTMLImageElement) {
+      if (icon.src.includes("close")) {
+        icon.src = "/assets/list.svg";
+      } else {
+        icon.src = "/assets/close.svg";
+      }
+    }
+    const navBar = document.getElementById("menu");
+    if (navBar) {
+      if (navBar.style.display === "none" || navBar.style.display === "") {
+        navBar.style.display = "block";
+
+        document.body.style.overflow = "hidden";
+      } else {
+        navBar.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+    }
+  });
+  document.getElementById("contact")?.addEventListener("click", () => {
     const icon = document.getElementById("icon");
     if (icon && icon instanceof HTMLImageElement) {
       if (icon.src.includes("close")) {
