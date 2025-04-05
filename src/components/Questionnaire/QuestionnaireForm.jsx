@@ -73,7 +73,6 @@ function QuestionnaireForm() {
                     setToastStatus("failed");
                 }
                 document.getElementById('header').scrollIntoView({ behavior: 'smooth' })
-
             })
             .catch((error) => {
                 console.error('Error:', error.message);
@@ -87,7 +86,7 @@ function QuestionnaireForm() {
     return (
         <>
             <form className="w-[60%] max-lg:w-full max-lg:flex max-lg:justify-center max-lg:items relative" >
-                <div id="toast" className="hidden items-center min-h-[50px] absolute w-[96%] max-lg:w-[95%] top-[-66px] mx-[2%] h-8 p-4 mb-4  text-gray-500 bg-white rounded-lg shadow-sm dark:text-gray-400 dark:bg-gray-800" role="alert">
+                <div id="toast" className="hidden items-center min-h-[96px] absolute w-[96%] max-lg:w-[95%] top-[-66px] mx-[2%] h-8 p-4 mb-4  text-gray-500 bg-white rounded-lg shadow-sm dark:text-gray-400 dark:bg-gray-800" role="alert">
                     {toastStatus === "success" && <div className="inline-flex items-center justify-center shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
                         <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
@@ -109,7 +108,7 @@ function QuestionnaireForm() {
                         </svg>
                     </button>
                 </div>
-                <div className="flex flex-wrap mb-6 max-lg:w-full">
+                {toastStatus !== "success" && <div className="flex flex-wrap mb-6 max-lg:w-full">
                     <div className="w-[50%] px-3 max-lg:mb-2">
                         <label className="block tracking-wide text-[#FFFFFF] text-[14px] font-normal leading-5" htmlFor="name">
                             Full Name <span className="text-red-500">*</span>
@@ -273,7 +272,7 @@ function QuestionnaireForm() {
                             </button>
                         </span>
                     </div>
-                </div>
+                </div>}
             </form>
         </>
     );
