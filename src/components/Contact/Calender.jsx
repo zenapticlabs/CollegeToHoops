@@ -1,7 +1,7 @@
 import React from "react";
 import { InlineWidget } from "react-calendly";
 
-const calendlyURL = import.meta.env.CALENDLY_URL;
+const calendlyURL = "https://calendly.com/myles-hoopstocollege/30min";
 
 const LoadingSpinner = () => (
   <div style={{
