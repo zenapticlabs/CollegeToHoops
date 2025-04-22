@@ -76,7 +76,7 @@ import list from "../../../public/assets/list.svg";
       >
     </div>
     <div
-      class="flex items-center flex-col justify-center justify-items-center gap-6 w-full pb-[6vh]"
+      class="flex items-center flex-col justify-center justify-items-center gap-6 w-full pb-[9vh]"
     >
       <button
         onclick="document.getElementById('footer').scrollIntoView({ behavior: 'smooth' })"
@@ -85,11 +85,12 @@ import list from "../../../public/assets/list.svg";
         >Contact
       </button>
       <span class="border-grad rounded-[8px]">
-        <button
-          class="font-semibold block text-[16px] bg-black !w-[50vw] text-white rounded-[8px] !pt-4 !pb-3.5 text-center"
-          onclick="document.getElementById('download-now').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto'; document.getElementById('icon').src='/assets/list.svg'"
-          >Get Started</button
-        >
+        <a href="/contact">
+          <button
+            class="font-semibold block text-[16px] bg-black !w-[50vw] text-white rounded-[8px] !pt-4 !pb-3.5 text-center"
+            >Get Started</button
+          >
+        </a>
       </span>
     </div>
   </div>
