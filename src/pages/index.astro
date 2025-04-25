@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import HeroSection from "../components/Home/HeroSection.astro";
 import Header from "../components/Home/Header.astro";
 import CollegeFitGuidance from "../components/Home/CollegeFitGuidance.astro";
-import RecruitingPlans from "../components/Home/RecruitingPlans.astro";
+import RecruitingPlans from "../components/Home/RecruitingPlans.jsx";
 import FreeRecruitingGuide from "../components/Home/FreeRecruitingGuide.jsx";
 import SuccessStories from "../components/Home/SuccessStories.astro";
 import Testimonials from "../components/Home/Testimonials.jsx";
@@ -26,7 +26,7 @@ import Testimonials from "../components/Home/Testimonials.jsx";
 	  </div>
 	</div>
 	<CollegeFitGuidance />
-	<RecruitingPlans />
+	<RecruitingPlans client:load />
 	<div class="bg-black">
 	  <div class="bg-[url('/assets/bg-main.png')] bg-center bg-cover">
 		<div class="bg-[#000000f3]">
